@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import NavBar from "@/components/NavBar";
 
 export const metadata: Metadata = {
   title: "Alvaro Torres | Software Engineer | Portfolio",
@@ -19,7 +20,12 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        <main className="px-40 py-2 flex items-center justify-center">
+          <NavBar />
+          {children}
+        </main>
+      </body>
     </html>
   );
 }
