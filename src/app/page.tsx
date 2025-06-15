@@ -2,6 +2,8 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { GrDocumentPdf } from "react-icons/gr";
 import { MdOutlineEmail } from "react-icons/md";
 import BackgroundVideo from "@/components/BackgroundVideo";
+import About from './about/About';
+import Skills from "./skills/Skills";
 
 export default function Home() {
   return (
@@ -53,9 +55,10 @@ export default function Home() {
 
       </section>
 
-      <div className="min-h-screen">
+      <About />
 
-      </div>
+      {/* <Skills /> */}
+      
     </>
   );
 }
