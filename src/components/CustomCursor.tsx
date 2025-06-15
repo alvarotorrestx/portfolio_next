@@ -29,8 +29,10 @@ export default function CustomCursor() {
   if (!showCursor) return null;
 
   return (
-    <motion.div
-      className="fixed top-0 left-0 w-4.5 h-4.5 rounded-full pointer-events-none z-[9999] bg-primary"
+    <motion.img
+      src="/images/icons/cursor.png"
+      alt="Custom Batman Cursor"
+      className="fixed w-8 h-6 z-[9999] pointer-events-none mix-blend-difference drop-shadow-[0_0_10px_rgba(255,0,0,0.6)]"
       style={{
         translateX: cursorXSpring,
         translateY: cursorYSpring,

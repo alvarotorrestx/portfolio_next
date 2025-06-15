@@ -1,10 +1,10 @@
 "use client";
 
 import { MdOutlineMenu, MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
-import { useTheme } from "@/app/context/ThemeContext";
+// import { useTheme } from "@/app/context/ThemeContext";
 
 const NavBar = () => {
-    const { darkMode, actions } = useTheme();
+    // const { darkMode, actions } = useTheme();
 
     return (
         <div className="px-2 md:px-10 lg:px-20 xl:px-40 navbar w-full flex justify-between items-center fixed top-0">
@@ -17,13 +17,13 @@ const NavBar = () => {
             </div>
 
             {/* Theme Swap */}
-            <div role="button" onClick={actions.toggleTheme} className="btn btn-ghost btn-circle">
+            {/* <div role="button" onClick={actions.toggleTheme} className="btn btn-ghost btn-circle">
                 {darkMode ?
                     <MdOutlineLightMode className="text-lg sm:text-xl" />
                     :
                     <MdOutlineDarkMode className="text-lg sm:text-xl" />
                 }
-            </div>
+            </div> */}
 
 
             {/* Menu */}
