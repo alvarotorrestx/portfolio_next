@@ -1,27 +1,29 @@
-type Props = {}
+import { MdOutlineMenu, MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 
-const NavBar = (props: Props) => {
+const NavBar = () => {
     return (
         <div className="navbar w-full flex justify-between items-center">
 
             {/* Logo */}
-            <div className="flex-1">
-                <a className="btn btn-ghost text-xl">LOGO</a>
+            <div className="navbar-start">
+                <a href='/' className="link">
+                    <img src="/images/brand/banner.png" alt="Logo" className="max-w-[115px] sm:max-w-[175px]"/>
+                </a>
             </div>
 
             {/* Theme Swap */}
             <div role="button" className="btn btn-ghost btn-circle">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /> </svg>
+                <MdOutlineLightMode className="text-lg sm:text-xl" />
             </div>
 
 
             {/* Menu */}
             <div className="navbar-end">
                 <div>
-                    <span className="text-md uppercase font-syne">Menu</span>
+                    <span className="text-xs sm:text-base uppercase font-syne">Menu</span>
                 </div>
                 <div role="button" className="btn btn-ghost btn-circle">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /> </svg>
+                    <MdOutlineMenu className="text-lg sm:text-xl" />
                 </div>
             </div>
         </div>
