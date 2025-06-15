@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 import { ThemeProvider } from "@/app/context/ThemeContext";
+import CustomCursor from "@/components/CustomCursor";
 
 export const metadata: Metadata = {
   title: "Alvaro Torres | Full-Stack Software Engineer",
@@ -22,8 +23,9 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="font-sans antialiased">
+      <body className="transition-colors duration-500 font-sans antialiased">
         <ThemeProvider>
+          <CustomCursor />
           <main className="px-2 md:px-10 lg:px-20 xl:px-40 flex items-center justify-center flex-col">
             <NavBar />
             {children}
