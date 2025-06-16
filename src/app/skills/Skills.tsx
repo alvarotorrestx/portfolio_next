@@ -52,29 +52,35 @@ const skills = {
 
 export default function Skills() {
     return (
-        <section className="py-20 px-6 max-w-7xl mx-auto">
-            <div className="text-center">
-                <RevealText
-                    text="Tech Stack"
-                    className="text-[clamp(1.5rem,4vw,4rem)]"
-                    bgColor="#252525"
-                    fgColor="#e70507"
-                />
-            </div>
+        <section className="py-20 px-4 max-w-5xl mx-auto w-full flex flex-col justify-center items-center">
+            <RevealText
+                text="Skills"
+                className="text-4xl md:text-5xl lg:text-6xl font-bold text-center"
+                bgColor="#252525"
+                fgColor="#e70507"
+            />
 
-            <div className="mt-16 space-y-12">
+            <div className="my-12 grid gap-x-12 gap-y-14 md:grid-cols-2 w-full">
                 {Object.entries(skills).map(([category, items]) => (
-                    <div key={category}>
-                        <h3 className="text-lg uppercase tracking-widest text-primary mb-4 font-bebas">{category}</h3>
-                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+                    <div key={category} className="space-y-6">
+                        {/* category heading */}
+                        <h3 className="text-base uppercase tracking-widest text-primary font-mono">
+                            {category}
+                        </h3>
+
+                        {/* skills pills */}
+                        <div className="flex flex-wrap gap-4">
                             {items.map((skill, i) => {
                                 const ref = useRef(null);
                                 const { scrollYProgress } = useScroll({
                                     target: ref,
                                     offset: ["start 100%", "end 10%"],
                                 });
-
-                                const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
+                                const opacity = useTransform(
+                                    scrollYProgress,
+                                    [0, 0.2, 0.8, 1],
+                                    [0, 1, 1, 0]
+                                );
                                 const y = useTransform(scrollYProgress, [0, 0.2], [20, 0]);
 
                                 return (
@@ -82,10 +88,15 @@ export default function Skills() {
                                         key={skill.name}
                                         ref={ref}
                                         style={{ opacity, y }}
-                                        className="flex items-center gap-3 p-4 border border-zinc-700 rounded-lg hover:border-primary transition-transform hover:scale-105"
+                                        className="group flex items-center gap-2 sm:gap-3 px-3 py-2 sm:px-4 sm:py-3 border border-accent rounded-full
+                                        transition-all duration-300 ease-in-out 
+                                        hover:bg-secondary hover:text-base-100 
+                                        hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]"
                                     >
-                                        <skill.icon className="text-primary text-2xl" />
-                                        <span className="text-sm font-medium text-base-content uppercase">{skill.name}</span>
+                                        <skill.icon className="group group-hover:text-black text-primary text-lg sm:text-2xl flex-shrink-0" />
+                                        <span className="group group-hover:text-black text-xs sm:text-sm font-medium text-base-content uppercase whitespace-nowrap">
+                                            {skill.name}
+                                        </span>
                                     </motion.div>
                                 );
                             })}
@@ -96,3 +107,4 @@ export default function Skills() {
         </section>
     );
 }
+

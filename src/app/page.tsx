@@ -29,7 +29,7 @@ export default function Home() {
         >
           I'm a Software Engineer with 4+ years of startup experience, specializing in full-stack development and building scalable, user-focused technology using JavaScript, Java, C++, PHP, and more.
         </p>
-        <span className="absolute bottom-0 right-0 italic text-[.6rem] lg:text-xs font-syne p-4 text-primary drop-shadow-[0_0_10px_rgba(255,0,0,1.0)]">
+        <span className="font-mono absolute bottom-0 right-0 italic text-[.5rem] lg:text-xs font-syne p-4 text-primary drop-shadow-[0_0_10px_rgba(255,0,0,1.0)]">
           Software Engineer by day... Architect of code by night.
         </span>
 

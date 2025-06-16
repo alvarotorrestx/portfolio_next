@@ -35,7 +35,7 @@ export default function RevealText({
       { color: bgColor },
       {
         color: fgColor,
-        stagger: 0.08,
+        stagger: 0.02,
         ease: "none",
         scrollTrigger: {
           trigger: containerRef.current,
@@ -53,9 +53,9 @@ export default function RevealText({
   }, [bgColor, fgColor]);
 
   return (
-    <p ref={containerRef} className={`font-bebas uppercase leading-tight ${className}`}>
+    <h3 ref={containerRef} className={`font-mono uppercase leading-tight ${className}`}>
       {text}
-    </p>
+    </h3>
   );
 }
 
