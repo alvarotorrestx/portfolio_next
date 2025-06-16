@@ -1,19 +1,16 @@
-import React from 'react'
-import ScrollFillHeading from "@/components/ScrollFillHeading";
+import RevealText from "@/components/RevealText";
 
-type Props = {}
-
-function About({ }: Props) {
+export default function About() {
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center">
-      <ScrollFillHeading
-        text="Hi There"
-        className="text-[clamp(2rem,6vw,6rem)] font-bebas"
-        frontClass="text-primary drop-shadow-[0_0_6px_theme(colors.primary/60%)]"
-        backClass="text-gray-700 dark:text-gray-800"
-      />
+    <section className="py-5 md:py-20 lg:py-30 flex items-center justify-center">
+      <div className="flex flex-wrap items-center justify-center text-center px-6 max-w-7xl">
+        <RevealText
+          text="Tech Stack"
+          className="text-[clamp(1.5rem,4vw,4rem)]"
+          bgColor="#252525"
+          fgColor="#e70507"
+        />
+      </div>
     </section>
-  )
+  );
 }
-
-export default About
