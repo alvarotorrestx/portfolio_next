@@ -20,16 +20,16 @@ export default function Home() {
           Alvaro Torres
         </h1>
         <h2
-          className="select-none text-2xl md:text-4xl lg:text-6xl uppercase font-bold text-center text-primary drop-shadow-[0_0_10px_rgba(255,0,0,1.0)]"
+          className="select-none text-2xl md:text-4xl lg:text-6xl uppercase font-bold text-center text-primary drop-shadow-[0_0_12px_rgba(255,0,0,1.0)]"
         >
           Full-Stack Software Engineer
         </h2>
         <p
-          className="select-none text-sm md:text-md lg:text-lg font-bold text-center text-neutral-300 drop-shadow-[0_0_12px_rgba(255,255,255,1.0)] max-w-xl lg:max-w-5xl"
+          className="select-none text-sm md:text-md lg:text-lg font-bold text-center text-neutral-300 drop-shadow-[0_0_8px_rgba(255,255,255,1.0)] max-w-xl lg:max-w-5xl"
         >
           I'm a Software Engineer with 4+ years of startup experience, specializing in full-stack development and building scalable, user-focused technology using JavaScript, Java, C++, PHP, and more.
         </p>
-        <span className="font-mono absolute bottom-0 right-0 italic text-[.5rem] lg:text-xs font-syne p-4 text-primary drop-shadow-[0_0_10px_rgba(255,0,0,1.0)]">
+        <span className="font-mono absolute bottom-0 right-0 italic text-[.5rem] md:text-[.6rem] lg:text-[.7rem] font-syne p-4 text-primary drop-shadow-[0_0_4px_rgba(255,0,0,1.0)]">
           Software Engineer by day... Architect of code by night.
         </span>
 

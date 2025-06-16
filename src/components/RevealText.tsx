@@ -30,24 +30,30 @@ export default function RevealText({
 
     const split = new SplitType(containerRef.current, { types: "words" });
 
-    gsap.fromTo(
+    split.words.forEach((w) => {
+      w.classList.add("reveal-glow");
+      (w as HTMLElement).style.setProperty("--glow", "0");
+    });
+
+    const tween = gsap.fromTo(
       split.words,
-      { color: bgColor },
+      { color: bgColor, "--glow": 0 },
       {
         color: fgColor,
+        "--glow": 1,
         stagger: 0.02,
         ease: "none",
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top 80%",
-          end:   "top 20%",
+          end: "top 20%",
           scrub: true,
         },
-      },
+      }
     );
 
     return () => {
-      split.revert();
+      tween.revert();
       ScrollTrigger.getById(containerRef.current as any)?.kill();
     };
   }, [bgColor, fgColor]);
