@@ -1,7 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { FaBriefcase } from "react-icons/fa";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { GiBatMask } from "react-icons/gi";
 import RevealText from '@/components/RevealText'
 
@@ -54,35 +54,45 @@ const Experience = () => {
             />
 
             <div className="relative my-12 border-l-2 border-primary">
-                {experiences.map((exp, index) => (
-                    <motion.div
-                        key={index}
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: index * 0.15 }}
-                        viewport={{ once: true }}
-                        className="[&:not(:last-child)]:mb-8 ml-6 relative rounded-xl"
-                    >
-                        <span className="absolute -left-[40.5px] top-1.5 w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-md">
-                            <GiBatMask className="text-black text-lg" />
-                        </span>
+                {experiences.map((exp, index) => {
+                    const ref = useRef<HTMLDivElement>(null);
+                    const { scrollYProgress } = useScroll({
+                        target: ref,
+                        offset: ["start 100%", "end 10%"],
+                    });
 
-                        <div className="group hover:bg-secondary hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.7)] border border-accent p-6 rounded-xl transition-all">
-                            <h3 className="group group-hover:text-white text-lg font-semibold text-primary">
-                                {exp.title}
-                            </h3>
-                            <p className="group group-hover:text-black text-base-content font-medium mb-1">
-                                {exp.company}
-                            </p>
-                            <span className="group group-hover:text-gray-200 text-sm text-gray-400 italic mb-3 block">
-                                {exp.date}
+                    const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
+                    const y = useTransform(scrollYProgress, [0, 0.2], [20, 0]);
+
+                    return (
+                        <motion.div
+                            key={`${exp.company}-${index}`}
+                            ref={ref}
+                            style={{ opacity, y }}
+                            className="[&:not(:last-child)]:mb-8 ml-6 relative rounded-xl"
+                        >
+                            <span className="absolute -left-[40.5px] top-1.5 w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-md">
+                                <GiBatMask className="text-black text-lg" />
                             </span>
-                            <p className="group group-hover:text-black text-base-content text-sm leading-relaxed">
-                                {exp.description}
-                            </p>
-                        </div>
-                    </motion.div>
-                ))}
+
+                            <div className="group border border-accent p-6 rounded-xl transition-all
+                              hover:bg-secondary hover:drop-shadow-[0_0_8px_rgb(255,255,255,0.7)]">
+                                <h3 className="group-hover:text-white text-lg font-semibold text-primary">
+                                    {exp.title}
+                                </h3>
+                                <p className="group-hover:text-black text-base-content font-medium mb-1">
+                                    {exp.company}
+                                </p>
+                                <span className="group-hover:text-gray-200 text-sm text-gray-400 italic mb-3 block">
+                                    {exp.date}
+                                </span>
+                                <p className="group-hover:text-black text-base-content text-sm font-semibold leading-relaxed">
+                                    {exp.description}
+                                </p>
+                            </div>
+                        </motion.div>
+                    );
+                })}
             </div>
         </section>
     )
