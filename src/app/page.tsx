@@ -4,6 +4,7 @@ import { MdOutlineEmail } from "react-icons/md";
 import BackgroundVideo from "@/components/BackgroundVideo";
 import About from './about/About';
 import Skills from "./skills/Skills";
+import Experience from "./experience/experience";
 
 export default function Home() {
   return (
@@ -29,7 +30,7 @@ export default function Home() {
         >
           I'm a Software Engineer with 4+ years of startup experience, specializing in full-stack development and building scalable, user-focused technology using JavaScript, Java, C++, PHP, and more.
         </p>
-        <span className="font-mono absolute bottom-0 right-0 italic text-[.5rem] md:text-[.6rem] lg:text-[.7rem] font-syne p-4 text-primary drop-shadow-[0_0_4px_rgba(255,0,0,1.0)]">
+        <span className="select-none font-mono absolute bottom-0 right-0 italic text-[.5rem] md:text-[.6rem] lg:text-[.7rem] font-syne p-4 text-primary drop-shadow-[0_0_4px_rgba(255,0,0,1.0)]">
           Software Engineer by day... Architect of code by night.
         </span>
 
@@ -66,6 +67,8 @@ export default function Home() {
       {/* <About /> */}
 
       <Skills />
+      
+      <Experience />
 
     </>
   );

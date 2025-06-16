@@ -64,14 +64,3 @@ export default function RevealText({
     </h3>
   );
 }
-
-let lenis: Lenis | null = null;
-
-if (typeof window !== "undefined" && !lenis) {
-  lenis = new Lenis({ smoothWheel: true, lerp: 0.08 });
-  const raf = (time: number) => {
-    lenis?.raf(time);
-    requestAnimationFrame(raf);
-  };
-  requestAnimationFrame(raf);
-}

@@ -23,7 +23,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="transition-colors duration-500 font-sans antialiased">
+      <body className="transition-colors duration-500 font-sans antialiased scroll-smooth">
         {/* <ThemeProvider> */}
           <CustomCursor />
           <main className="px-2 md:px-10 lg:px-20 xl:px-40 flex items-center justify-center flex-col">
