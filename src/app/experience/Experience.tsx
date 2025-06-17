@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { GiBatMask } from "react-icons/gi";
+import { MdArrowForward } from "react-icons/md";
 import RevealText from '@/components/RevealText'
 
 type Experience = {
@@ -45,7 +46,7 @@ const experiences: Experience[] = [
 
 const Experience = () => {
     return (
-        <section className="py-20 px-4 max-w-[52rem] mx-auto w-full flex flex-col justify-center items-center">
+        <section className="py-10 px-4 max-w-[52rem] mx-auto w-full flex flex-col justify-center items-center">
             <RevealText
                 text="Experience"
                 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center"
@@ -94,6 +95,14 @@ const Experience = () => {
                     );
                 })}
             </div>
+
+            <a href='/documents/Alvaro_Torres_Resume.pdf' title='Resume' target='_blank'
+            className="justify-center p-4 group flex items-center gap-2 border border-accent rounded-full
+            transition-all duration-300 ease-in-out text-base md:text-lg font-bold
+            hover:bg-secondary hover:text-base-100 
+            hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]">
+                View My Resume <MdArrowForward className="text-lg sm:text-2xl" />
+            </a>
         </section>
     )
 }

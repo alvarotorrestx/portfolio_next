@@ -4,7 +4,6 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
-import Lenis from "@studio-freight/lenis";
 
 /* -------------------------------------------------------------------------- */
 
@@ -59,7 +58,7 @@ export default function RevealText({
   }, [bgColor, fgColor]);
 
   return (
-    <h3 ref={containerRef} className={`font-mono uppercase leading-tight ${className}`}>
+    <h3 ref={containerRef} className={`select-none font-mono uppercase leading-tight ${className}`}>
       {text}
     </h3>
   );

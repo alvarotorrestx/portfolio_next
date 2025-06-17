@@ -4,7 +4,8 @@ import { MdOutlineEmail } from "react-icons/md";
 import BackgroundVideo from "@/components/BackgroundVideo";
 import About from './about/About';
 import Skills from "./skills/Skills";
-import Experience from "./experience/experience";
+import Experience from "./experience/Experience";
+import Portfolio from "./portfolio/Portfolio";
 
 export default function Home() {
   return (
@@ -69,6 +70,8 @@ export default function Home() {
       <Skills />
       
       <Experience />
+      
+      <Portfolio />
 
     </>
   );
