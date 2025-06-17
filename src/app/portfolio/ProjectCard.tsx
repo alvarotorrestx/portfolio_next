@@ -41,9 +41,8 @@ export default function ProjectCard({ title, description, image, techStack, link
         {link && (
           <a
             href={link}
-            target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 inline-flex items-center gap-2 text-sm text-primary hover:text-white"
+            className="mt-4 inline-flex items-center gap-2 text-sm text-primary group-hover:text-white"
           >
             View Project <FiExternalLink />
           </a>

@@ -33,7 +33,7 @@ export default function Portfolio() {
               {category}
             </h3>
 
-            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-6 sm:grid-cols-2">
               {items.map((project, i) => {
                 const ref = useRef(null);
                 const { scrollYProgress } = useScroll({
