@@ -2,6 +2,7 @@ const projects = [
   {
     id: "coco_salvaje",
     title: "Coco Salvaje",
+    summary: "Colombian natural skincare brand with Shopify and Amazon storefronts.",
     description: "Coco Salvaje is a skin care company based in Colombia who ship their products throughout their country and the United States through their e-commerce store on Shopify and Amazon.",
     image: "/images/projects/business_logos/coco_salvaje.jpg",
     techStack: [
@@ -13,12 +14,13 @@ const projects = [
       "WordPress",
       "WooCommerce"
     ],
-    link: "",
+    link: "#",
     type: "Client Work",
   },
   {
     id: "hacienda_mobile_home_sales",
     title: "Hacienda Mobile Home Sales",
+    summary: "Mobile home real estate website redesign and PHP/MySQL to WiX migration.",
     description: "Hacienda Mobile Home Sales is a mobile home real estate company that contracted me to redesign their company website; migrating from a legacy PHP/MySQL website to the WiX CMS.",
     image: "/images/projects/business_logos/hacienda.jpg",
     techStack: [
@@ -29,12 +31,13 @@ const projects = [
       "CSS",
       "WIX"
     ],
-    link: "",
+    link: "#",
     type: "Client Work",
   },
   {
     id: "blue_and_gold_clothing",
     title: "Blue & Gold Clothing",
+    summary: "E-commerce apparel store built with Shopify CMS.",
     description: "Blue & Gold Clothing is an online apparel startup company who entrusted me to develop their website and set up a CRM/CMS via the Shopify platform.",
     image: "/images/projects/business_logos/blue_gold_clothing.jpg",
     techStack: [
@@ -44,12 +47,13 @@ const projects = [
       "CSS",
       "Shopify",
     ],
-    link: "",
+    link: "#",
     type: "Client Work",
   },
   {
     id: "slate_prints",
     title: "Slate Prints",
+    summary: "Custom Shopify storefront for personalized gift business.",
     description: "Slate Prints is an online e-commerce store with customizable products who contracted me to bring their vision to life with a modern website design and set up an CRM/CMS via Shopify.",
     image: "/images/projects/business_logos/slate_prints.jpg",
     techStack: [
@@ -59,12 +63,13 @@ const projects = [
       "CSS",
       "Shopify",
     ],
-    link: "",
+    link: "#",
     type: "Client Work",
   },
   {
     id: "classic_barbershop",
     title: "Classic Barbershop",
+    summary: "Barbershop website upgrade with improved SEO.",
     description: "Classic Barbershop is a local barbershop who contracted me to enhance their online presence by updating their website design, improving SEO, managing their Google Business Profile, running Google ads and optimizing their social media for Facebook and Instagram.",
     image: "/images/projects/business_logos/classic_barbershop.png",
     techStack: [
@@ -73,24 +78,26 @@ const projects = [
       "CSS",
       "Squarespace",
     ],
-    link: "",
+    link: "#",
     type: "Client Work",
   },
   {
     id: "game_of_life",
     title: "Conway's Game of Life",
+    summary: "C++ cellular automaton with interactive GUI.",
     description: "A C++ implementation of Conway's Game of Life, featuring a GUI built with wxWidgets. The project simulates the evolution of a cellular automaton based on simple rules and allows users to interact with the game through an intuitive graphical interface.",
     image: "/images/projects/project_logos/conways_game_of_life.png",
     techStack: [
       "C++",
       "wxWidgets",
     ],
-    link: "",
+    link: "#",
     type: "School Projects",
   },
   {
     id: "simulint_innovations",
     title: "Simulint Innovations",
+    summary: "Digital agency delivering web and marketing solutions.",
     description: "Simulint Innovations is a digital solutions agency with a mission to deliver tailored web design, development, and digital marketing services.",
     image: "/images/projects/business_logos/simulint_innovations.jpg",
     techStack: [
@@ -104,24 +111,26 @@ const projects = [
       "WordPress",
       "Squarespace",
     ],
-    link: "",
+    link: "#",
     type: "Client Work",
   },
   {
     id: "scientific_calculator",
     title: "Scientific Calculator",
+    summary: "Custom calculator with singleton button factory pattern in C++.",
     description: "A scientific calculator application that provides an interactive GUI with dynamically created buttons using a Singleton Pattern Button Factory, allowing for a flexible and scalable design.",
     image: "/images/projects/project_logos/scientific_calculator.jpg",
     techStack: [
       "C++",
       "wxWidgets",
     ],
-    link: "",
+    link: "#",
     type: "School Projects",
   },
   {
     id: "heroic_organizer",
     title: "Heroic Organizer",
+    summary: "Android app using ML to organize comic book collections.",
     description: "Heroic Organizer is an Android app built using Java and Firebase for comic book collectors and enthusiasts. The app has the ability to identify comics using barcode scanning (powered by Google’s ML Kit) and cover image scanning with metadata retrieval using Machine Learning (Weaviate).",
     image: "/images/projects/project_logos/heroic_organizer.png",
     techStack: [
@@ -131,13 +140,14 @@ const projects = [
       "Google ML Kit",
       "Weaviate",
     ],
-    link: "",
+    link: "#",
     type: "Projects",
   },
   {
     id: "devconnect",
     title: "DevConnect",
-    description: "DevConnect is a developer-first networking platform designed to help engineers connect, collaborate, and share opportunities. The platform is an open-source MERN stack networking platform for developers that supports scalable role-based access control, authentication, and contributor collaboration.",
+    summary: "Open-source MERN full-stack platform for developers to network.",
+    description: "DevConnect is a developer-first networking platform designed to help engineers connect, collaborate, and share opportunities. The platform is an open-source MERN full-stack build for developers that supports scalable role-based access control, authentication, and contributor collaboration.",
     image: "/images/projects/project_logos/devconnect.png",
     techStack: [
       "React",
@@ -149,7 +159,7 @@ const projects = [
       "TailwindCSS",
       "Vite",
     ],
-    link: "",
+    link: "#",
     type: "Projects",
   },
 ];
