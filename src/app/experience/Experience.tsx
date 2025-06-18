@@ -97,7 +97,7 @@ const Experience = () => {
             </div>
 
             {/* Resume Link */}
-            <Link url={"/documents/Alvaro_Torres_Resume.pdf"} text={"View My Resume"} icon={<FiExternalLink />} newPage />
+            <Link extLink url={"/documents/Alvaro_Torres_Resume.pdf"} text={"View My Resume"} icon={<FiExternalLink />} />
 
         </section>
     )

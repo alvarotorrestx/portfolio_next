@@ -14,7 +14,7 @@ const projects = [
       "WordPress",
       "WooCommerce"
     ],
-    link: "#",
+    link: "/projects/coco_salvaje",
     type: "Professional Work",
   },
   {
@@ -31,7 +31,7 @@ const projects = [
       "CSS",
       "WIX"
     ],
-    link: "#",
+    link: "/projects/hacienda_mobile_home_sales",
     type: "Professional Work",
   },
   {
@@ -47,7 +47,7 @@ const projects = [
       "CSS",
       "Shopify",
     ],
-    link: "#",
+    link: "/projects/blue_and_gold_clothing",
     type: "Professional Work",
   },
   {
@@ -63,7 +63,7 @@ const projects = [
       "CSS",
       "Shopify",
     ],
-    link: "#",
+    link: "/projects/slate_prints",
     type: "Professional Work",
   },
   {
@@ -78,7 +78,7 @@ const projects = [
       "CSS",
       "Squarespace",
     ],
-    link: "#",
+    link: "/projects/classic_barbershop",
     type: "Professional Work",
   },
   {
@@ -91,7 +91,7 @@ const projects = [
       "C++",
       "wxWidgets",
     ],
-    link: "#",
+    link: "/projects/game_of_life",
     type: "Academic Projects",
   },
   {
@@ -111,7 +111,7 @@ const projects = [
       "WordPress",
       "Squarespace",
     ],
-    link: "#",
+    link: "/projects/simulint_innovations",
     type: "Professional Work",
   },
   {
@@ -124,7 +124,7 @@ const projects = [
       "C++",
       "wxWidgets",
     ],
-    link: "#",
+    link: "/projects/scientific_calculator",
     type: "Academic Projects",
   },
   {
@@ -140,7 +140,7 @@ const projects = [
       "Google ML Kit",
       "Weaviate",
     ],
-    link: "#",
+    link: "/projects/heroic_organizer",
     type: "Professional Work",
   },
   {
@@ -159,7 +159,7 @@ const projects = [
       "TailwindCSS",
       "Vite",
     ],
-    link: "#",
+    link: "/projects/devconnect",
     type: "Professional Work",
   },
   {
@@ -178,7 +178,7 @@ const projects = [
       "DaisyUI",
       "Framer Motion",
     ],
-    link: "#",
+    link: "/projects/portfolio_next",
     type: "Professional Work",
   },
 ];

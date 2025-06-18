@@ -33,7 +33,7 @@ export default function ProjectCard({ title, summary, techStack, link }: Project
           ))}
         </div>
         {link && (
-          <Link url={link} text={"View Project"} icon={<MdArrowForward className="text-lg sm:text-2xl" />} newPage={false} />
+          <Link url={link} text={"View Project"} icon={<MdArrowForward className="text-lg sm:text-2xl" />} />
         )}
       </div>
     </motion.div>
