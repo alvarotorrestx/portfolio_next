@@ -17,21 +17,17 @@ export default function ProjectCard({ title, summary, techStack, link }: Project
       transition={{ duration: 0.6 }}
       className="group overflow-hidden transition-all"
     >
-      {/* {image && (
-        <img
-          src={image}
-          alt={title}
-          className="w-full h-48 object-cover transition-transform group-hover:scale-105"
-        />
-      )} */}
-      <div className="p-6">
-        <h3 className="text-lg font-bold text-primary">{title}</h3>
-        <p className="text-sm text-base-content mt-1">{summary}</p>
+      <div className="md:pl-4 space-y-2">
+        <h3 className="text-2xl md:text-3xl font-bold text-primary">{title}</h3>
+        <p className="text-base md:text-lg text-base-content mt-1">{summary}</p>
         <div className="flex flex-wrap gap-2 mt-3">
           {techStack.map((tech, i) => (
             <span
               key={i}
-              className="text-xs px-2 py-1 border border-accent rounded-full text-base-content"
+              className="text-sm md:text-base px-2 py-1 border border-accent rounded-full text-base-content
+                          transition-all duration-300 ease-in-out 
+                          hover:bg-secondary hover:text-base-100 
+                          hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]"
             >
               {tech}
             </span>
@@ -40,7 +36,7 @@ export default function ProjectCard({ title, summary, techStack, link }: Project
         {link && (
           <a href={link}
             rel="noopener noreferrer"
-            className="justify-center px-6 py-4 my-4 group inline-flex items-center gap-2 border border-accent rounded-full
+            className="justify-center px-4 py-3 my-4 group inline-flex items-center gap-2 border border-accent rounded-full
                       transition-all duration-300 ease-in-out text-base font-bold
                       hover:bg-secondary hover:text-base-100 
                       hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]">

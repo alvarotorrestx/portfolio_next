@@ -97,10 +97,10 @@ const Experience = () => {
             </div>
 
             <a href='/documents/Alvaro_Torres_Resume.pdf' title='Resume' target='_blank'
-            className="justify-center p-4 group flex items-center gap-2 border border-accent rounded-full
-            transition-all duration-300 ease-in-out text-base md:text-lg font-bold
-            hover:bg-secondary hover:text-base-100 
-            hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]">
+                className="justify-center px-4 py-3 my-4 group inline-flex items-center gap-2 border border-accent rounded-full
+                      transition-all duration-300 ease-in-out text-base font-bold
+                      hover:bg-secondary hover:text-base-100 
+                      hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]">
                 View My Resume <MdArrowForward className="text-lg sm:text-2xl" />
             </a>
         </section>
