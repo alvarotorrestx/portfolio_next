@@ -1,5 +1,3 @@
-// src/app/(home)/Portfolio.tsx   (or wherever you keep it)
-
 "use client";
 
 import { useRef } from "react";
@@ -8,9 +6,17 @@ import RevealText from "@/components/RevealText";
 import ProjectCard from "./ProjectCard";
 import projects from "./Projects";
 
+const SECTION_ORDER = ["Professional Work", "Academic Projects"] as const;
+
 export default function Portfolio() {
+  const grouped = projects.reduce<Record<string, typeof projects>>((acc, p) => {
+    (acc[p.type] ??= []).push(p);
+    return acc;
+  }, {});
+
   return (
-    <section className="max-w-[550px] md:max-w-[1600px] py-20 px-4 mx-auto w-full flex flex-col justify-center items-center overflow-hidden">
+    <section className="max-w-[550px] md:max-w-[1600px] py-20 px-4 mx-auto
+                        w-full flex flex-col justify-center items-center overflow-hidden">
       <RevealText
         text="Portfolio"
         className="text-4xl md:text-5xl lg:text-6xl font-bold text-center"
@@ -18,14 +24,36 @@ export default function Portfolio() {
         fgColor="#e70507"
       />
 
-      <div className="my-24 space-y-32">
-        {projects.toReversed().map((proj, idx) => (
-          <ProjectRow key={proj.title} project={proj} index={idx} />
-        ))}
+      <div className="my-24 space-y-24">
+        {SECTION_ORDER.map(section => {
+          const list = grouped[section] ?? [];
+          if (!list.length) return null;
+
+          return (
+            <div key={section} className="space-y-32">
+              <h2 className="text-lg md:text-xl lg:text-2xl font-mono uppercase
+                             tracking-widest text-primary text-start">
+                {section}
+              </h2>
+
+              {list
+                .slice()
+                .reverse()
+                .map((proj, idx) => (
+                  <ProjectRow
+                    key={proj.id}
+                    project={proj}
+                    index={idx}
+                  />
+                ))}
+            </div>
+          );
+        })}
       </div>
     </section>
   );
 }
+
 
 function ProjectRow({
   project,
@@ -41,53 +69,34 @@ function ProjectRow({
     offset: ["start 100%", "end 90%"],
   });
 
-  const xImg = useTransform(
-    scrollYProgress,
-    [0, 1],
-    index % 2 === 0 ? ["-20%", "0%"] : ["20%", "0%"]
-  );
-  const opacityImg = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
-
   const isEven = index % 2 === 0;
 
-  const rotateZ = useTransform(
-    scrollYProgress,
-    [0, 1],
-    index % 2 === 0 ? [-22, 0] : [22, 0]
-  );
-
+  const xImg = useTransform(scrollYProgress, [0, 1],
+    isEven ? ["-20%", "0%"] : ["20%", "0%"]);
+  const opacityImg = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
+  const rotateZ = useTransform(scrollYProgress, [0, 1],
+    isEven ? [-22, 0] : [22, 0]);
+  const rotateY = useTransform(scrollYProgress, [0, 1],
+    isEven ? [-5, 0] : [5, 0]);
+  const yText = useTransform(scrollYProgress, [0, 1], [200, 0]);
 
   return (
     <motion.div
       ref={ref}
-      className="grid grid-cols-1 items-center justify-center md:flex md:flex-row md:items-start gap-10"
-      // swap order on larger screens to alternate L / R
+      className="grid grid-cols-1 md:flex items-center gap-10"
       style={{ flexDirection: isEven ? "row" : "row-reverse" }}
     >
       <motion.img
         will-change="transform"
         src={project.image ?? "/images/placeholder.jpg"}
         alt={project.title}
-        style={{
-          x: xImg,
-          opacity: opacityImg,
-          rotateZ,
-          rotateY: useTransform(scrollYProgress, [0, 1], index % 2 === 0 ? [-5, 0] : [5, 0]),
-          scale: 1,
-        }}
+        style={{ x: xImg, opacity: opacityImg, rotateZ, rotateY }}
         className="w-full md:w-1/2 h-64 md:h-[27rem] object-fill rounded-lg shadow-lg"
       />
 
-
-      <motion.div
-        style={{
-          y: useTransform(scrollYProgress, [0, 1], [200, 0]),
-        }}
-        className="w-full md:w-1/2"
-      >
+      <motion.div style={{ y: yText }} className="w-full md:w-1/2">
         <ProjectCard {...project} />
       </motion.div>
-
     </motion.div>
   );
 }

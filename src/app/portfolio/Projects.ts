@@ -15,7 +15,7 @@ const projects = [
       "WooCommerce"
     ],
     link: "#",
-    type: "Client Work",
+    type: "Professional Work",
   },
   {
     id: "hacienda_mobile_home_sales",
@@ -32,7 +32,7 @@ const projects = [
       "WIX"
     ],
     link: "#",
-    type: "Client Work",
+    type: "Professional Work",
   },
   {
     id: "blue_and_gold_clothing",
@@ -48,7 +48,7 @@ const projects = [
       "Shopify",
     ],
     link: "#",
-    type: "Client Work",
+    type: "Professional Work",
   },
   {
     id: "slate_prints",
@@ -64,7 +64,7 @@ const projects = [
       "Shopify",
     ],
     link: "#",
-    type: "Client Work",
+    type: "Professional Work",
   },
   {
     id: "classic_barbershop",
@@ -79,7 +79,7 @@ const projects = [
       "Squarespace",
     ],
     link: "#",
-    type: "Client Work",
+    type: "Professional Work",
   },
   {
     id: "game_of_life",
@@ -92,7 +92,7 @@ const projects = [
       "wxWidgets",
     ],
     link: "#",
-    type: "School Projects",
+    type: "Academic Projects",
   },
   {
     id: "simulint_innovations",
@@ -112,7 +112,7 @@ const projects = [
       "Squarespace",
     ],
     link: "#",
-    type: "Client Work",
+    type: "Professional Work",
   },
   {
     id: "scientific_calculator",
@@ -125,7 +125,7 @@ const projects = [
       "wxWidgets",
     ],
     link: "#",
-    type: "School Projects",
+    type: "Academic Projects",
   },
   {
     id: "heroic_organizer",
@@ -141,7 +141,7 @@ const projects = [
       "Weaviate",
     ],
     link: "#",
-    type: "Projects",
+    type: "Professional Work",
   },
   {
     id: "devconnect",
@@ -160,7 +160,26 @@ const projects = [
       "Vite",
     ],
     link: "#",
-    type: "Projects",
+    type: "Professional Work",
+  },
+  {
+    id: "portfolio_next",
+    title: "Portfolio",
+    summary: "Personal developer portfolio built with modern frameworks and UI libraries.",
+    description: "A sleek, one-page developer portfolio showcasing my work, experience, and skills. Built using Next.js, TypeScript, and TailwindCSS, it features smooth scroll animations with Framer Motion, responsive design, and dynamic sections powered by structured data for projects and experience.",
+    image: "/images/projects/project_logos/portfolio.jpg",
+    techStack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "JavaScript",
+      "Node.js",
+      "TailwindCSS",
+      "DaisyUI",
+      "Framer Motion",
+    ],
+    link: "#",
+    type: "Professional Work",
   },
 ];
 
