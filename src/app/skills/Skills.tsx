@@ -88,13 +88,11 @@ export default function Skills() {
                                         key={skill.name}
                                         ref={ref}
                                         style={{ opacity, y }}
-                                        className="group flex items-center gap-2 sm:gap-3 px-3 py-2 sm:px-4 sm:py-3 border border-accent rounded-full
-                                        transition-all duration-300 ease-in-out 
-                                        hover:bg-secondary hover:text-base-100 
-                                        hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]"
+                                        className="flex items-center gap-2 sm:gap-3 px-3 py-2 sm:px-4 sm:py-3 border border-accent rounded-lg
+                                        transition-all duration-300 ease-in-out"
                                     >
-                                        <skill.icon className="group group-hover:text-black text-primary text-lg sm:text-2xl flex-shrink-0" />
-                                        <span className="group group-hover:text-black text-xs sm:text-sm font-medium text-base-content uppercase whitespace-nowrap">
+                                        <skill.icon className="text-primary text-lg sm:text-2xl flex-shrink-0" />
+                                        <span className="text-xs sm:text-sm font-medium text-base-content uppercase whitespace-nowrap">
                                             {skill.name}
                                         </span>
                                     </motion.div>

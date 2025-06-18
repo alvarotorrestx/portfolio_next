@@ -3,8 +3,9 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { GiBatMask } from "react-icons/gi";
-import { MdArrowForward } from "react-icons/md";
+import { FiExternalLink } from "react-icons/fi";
 import RevealText from '@/components/RevealText'
+import Link from "@/components/Link";
 
 type Experience = {
     title: string;
@@ -70,24 +71,23 @@ const Experience = () => {
                             key={`${exp.company}-${index}`}
                             ref={ref}
                             style={{ opacity, y }}
-                            className="[&:not(:last-child)]:mb-8 ml-6 relative rounded-xl"
+                            className="[&:not(:last-child)]:mb-8 ml-6 relative rounded-sm"
                         >
                             <span className="absolute -left-[40.5px] top-1.5 w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-md">
                                 <GiBatMask className="text-black text-lg" />
                             </span>
 
-                            <div className="group border border-accent p-6 rounded-xl transition-all
-                              hover:bg-secondary hover:drop-shadow-[0_0_8px_rgb(255,255,255,0.7)]">
-                                <h3 className="group-hover:text-white text-lg font-semibold text-primary">
+                            <div className="border border-accent p-6 rounded-lg transition-all">
+                                <h3 className="text-lg font-semibold text-primary">
                                     {exp.title}
                                 </h3>
-                                <p className="group-hover:text-black text-base-content font-medium mb-1">
+                                <p className="text-base-content font-medium mb-1">
                                     {exp.company}
                                 </p>
-                                <span className="group-hover:text-gray-200 text-sm text-gray-400 italic mb-3 block">
+                                <span className="text-sm text-gray-400 italic mb-3 block">
                                     {exp.date}
                                 </span>
-                                <p className="group-hover:text-black text-base-content text-sm font-semibold leading-relaxed">
+                                <p className="text-base-content text-sm font-semibold leading-relaxed">
                                     {exp.description}
                                 </p>
                             </div>
@@ -96,13 +96,9 @@ const Experience = () => {
                 })}
             </div>
 
-            <a href='/documents/Alvaro_Torres_Resume.pdf' title='Resume' target='_blank'
-                className="justify-center px-4 py-3 my-4 group inline-flex items-center gap-2 border border-accent rounded-full
-                      transition-all duration-300 ease-in-out text-base font-bold
-                      hover:bg-secondary hover:text-base-100 
-                      hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]">
-                View My Resume <MdArrowForward className="text-lg sm:text-2xl" />
-            </a>
+            {/* Resume Link */}
+            <Link url={"/documents/Alvaro_Torres_Resume.pdf"} text={"View My Resume"} icon={<FiExternalLink />} newPage />
+
         </section>
     )
 }

@@ -22,3 +22,19 @@
 .reveal-glow{
   text-shadow:0 0 12px rgba(231,5,7,var(--glow,0));
 }
+
+@keyframes border-glow {
+  0% {
+    box-shadow: 0 0 4px rgba(255, 0, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 4px rgba(255, 0, 0, 0.2);
+  }
+}
+
+.animate-border-glow {
+  animation: border-glow 2.5s ease-in-out infinite;
+}
