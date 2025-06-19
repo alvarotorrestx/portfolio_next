@@ -13,9 +13,9 @@ type LinkProps = {
 const Link = ({ extLink = false, url, text, icon }: LinkProps) => {
   const classes =
     `
-      justify-center px-4 py-3 my-4 group inline-flex items-center gap-2 rounded-full
-      text-base font-bold transition-all duration-500 ease-in-out
-      hover:bg-secondary hover:text-base-100 hover:drop-shadow-[0_0_8px_rgba(255,0,0,1)]
+      justify-center px-4 py-3 my-4 group inline-flex items-center gap-2 rounded-lg
+      hover:text-base-content font-bold transition-all duration-500 ease-in-out
+      bg-secondary hover:bg-base-100 text-base-100 drop-shadow-[0_0_8px_rgba(255,0,0,1)]
       relative z-10 animate-border-glow
     `;
 

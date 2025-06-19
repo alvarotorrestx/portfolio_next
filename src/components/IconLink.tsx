@@ -13,7 +13,7 @@ type LinkProps = {
 const Link = ({ extLink = false, url, title, icon }: LinkProps) => {
     const classes =
         `
-        inline-flex items-center justify-center p-4 hover:bg-secondary hover:text-base-100 rounded-full 
+        inline-flex items-center justify-center p-4 hover:bg-secondary hover:text-base-100 rounded-lg 
         transition drop-shadow-[0_0_8px_rgba(255,255,255,0.7)] hover:drop-shadow-[0_0_8px_rgba(0,0,0,0.7)]
         `;
 

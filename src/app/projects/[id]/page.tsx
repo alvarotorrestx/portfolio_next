@@ -56,36 +56,48 @@ export default function ProjectPage() {
 
           </div>
 
-          <div className="flex flex-row flex-wrap gap-2 justify-start items-center">
-            {project.github && (
-              <IconLink extLink url={project.github} title="GitHub" icon={<FaGithub className="text-lg sm:text-xl" />} />
-            )}
-            {project.live && (
-              <Link extLink url={project.live} text="Visit Website" icon={<FiExternalLink />} />
-            )}
-          </div>
+          {(project.github || project.live) && (
+            <div className="flex flex-wrap flex-col mb-6">
+              <h2 className="text-lg md:text-xl lg:text-2xl font-mono
+                         tracking-widest text-primary text-start">
+                Explore
+              </h2>
+              <div className="flex flex-row flex-wrap gap-2.5 justify-start items-center">
+                {project.github && (
+                  <IconLink extLink url={project.github} title="GitHub" icon={<FaGithub className="text-2xl" />} />
+                )}
+                {project.live && (
+                  <Link extLink url={project.live} text="Visit Website" icon={<FiExternalLink />} />
+                )}
+              </div>
+            </div>
+          )}
 
-          <div className="flex flex-col justify-center items-center gap-6 mt-6">
-            {project.figma && project.figma.map((p, i) => (
-              <iframe key={i} width="100%" height="600"
-                src={p} allowFullScreen>
-              </iframe>
-            ))}
-          </div>
+          {project.figma?.length > 0 && (
+            <div className="flex flex-col justify-center items-center gap-6 mt-6">
+              {project.figma.map((p, i) => (
+                <iframe key={i} width="100%" height="600"
+                  src={p} allowFullScreen>
+                </iframe>
+              ))}
+            </div>
+          )}
 
-          <div className="flex flex-col justify-center items-center gap-6 mt-6">
-            {project.page_images && project.page_images.map((img, i) => (
-              <img src={img} key={i} alt={project.title} title={project.title} className="w-full h-auto drop-shadow-[0_0_12px_rgba(255,0,0,1.0)] rounded-lg" />
-            ))}
-          </div>
+          {project.page_images?.length > 0 && (
+            <div className="flex flex-col justify-center items-center gap-6 mt-6">
+              {project.page_images.map((img, i) => (
+                <img src={img} key={i} alt={project.title} title={project.title} className="w-full h-auto drop-shadow-[0_0_12px_rgba(255,0,0,1.0)] rounded-lg" />
+              ))}
+            </div>
+          )}
 
-          <div className="flex flex-col justify-center items-center gap-6 mt-6">
-            {project.demo && (
+          {project.demo && (
+            <div className="flex flex-col justify-center items-center gap-6 mt-6">
               <iframe width="100%" height="500" src={project.demo} title={project.title}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-            )}
-          </div>
+            </div>
+          )}
 
         </motion.div>
 

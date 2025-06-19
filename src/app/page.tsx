@@ -39,16 +39,16 @@ export default function Home() {
         {/* Important Link */}
         <ul className="flex flex-row justify-center items-center gap-4 flex-wrap">
           <li>
-            <IconLink extLink title="Resume" url="/documents/Alvaro_Torres_Resume.pdf" icon={<GrDocumentPdf className="text-lg sm:text-xl" />} />
+            <IconLink extLink title="Resume" url="/documents/Alvaro_Torres_Resume.pdf" icon={<GrDocumentPdf className="text-[1.4rem]" />} />
           </li>
           <li>
-            <IconLink extLink title="GitHub" url="https://github.com/alvarotorrestx" icon={<FaGithub className="text-lg sm:text-xl" />} />
+            <IconLink extLink title="GitHub" url="https://github.com/alvarotorrestx" icon={<FaGithub className="text-2xl" />} />
           </li>
           <li>
-            <IconLink extLink title="LinkedIn" url="https://linkedin.com/in/alvarotorrestx" icon={<FaLinkedin className="text-lg sm:text-xl" />} />
+            <IconLink extLink title="LinkedIn" url="https://linkedin.com/in/alvarotorrestx" icon={<FaLinkedin className="text-2xl" />} />
           </li>
           <li>
-            <IconLink extLink title="Email" url="mailto:alvaro@alvarotorres.dev" icon={<MdOutlineEmail className="text-lg sm:text-2xl" />} />
+            <IconLink extLink title="Email" url="mailto:alvaro@alvarotorres.dev" icon={<MdOutlineEmail className="text-[1.75rem]" />} />
           </li>
         </ul>
 
