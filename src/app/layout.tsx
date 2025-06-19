@@ -3,6 +3,7 @@ import "./globals.css";
 import NavBar from "@/components/NavBar";
 import { ThemeProvider } from "@/app/context/ThemeContext";
 import CustomCursor from "@/components/CustomCursor";
+import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: "Alvaro Torres | Full-Stack Software Engineer",
@@ -30,6 +31,7 @@ export default function RootLayout({
             {/* <NavBar /> */}
             {children}
           </main>
+          <Footer />
         {/* </ThemeProvider> */}
       </body>
     </html>
