@@ -6,6 +6,7 @@ import About from './about/About';
 import Skills from "./skills/Skills";
 import Experience from "./experience/Experience";
 import Portfolio from "./portfolio/Portfolio";
+import IconLink from '@/components/IconLink';
 
 export default function Home() {
   return (
@@ -38,28 +39,16 @@ export default function Home() {
         {/* Important Link */}
         <ul className="flex flex-row justify-center items-center gap-4 flex-wrap">
           <li>
-            <a href='/documents/Alvaro_Torres_Resume.pdf' title='Resume' target='_blank'
-              className="inline-flex items-center justify-center p-4 hover:bg-secondary hover:text-base-100 rounded-full transition drop-shadow-[0_0_8px_rgba(255,255,255,0.7)] hover:drop-shadow-[0_0_8px_rgba(0,0,0,0.7)]">
-              <GrDocumentPdf className="text-lg sm:text-xl" />
-            </a>
+            <IconLink extLink title="Resume" url="/documents/Alvaro_Torres_Resume.pdf" icon={<GrDocumentPdf className="text-lg sm:text-xl" />} />
           </li>
           <li>
-            <a href='https://github.com/alvarotorrestx' title='GitHub' target='_blank'
-              className="inline-flex items-center justify-center p-4 hover:bg-secondary hover:text-base-100 rounded-full transition drop-shadow-[0_0_8px_rgba(255,255,255,0.7)] hover:drop-shadow-[0_0_8px_rgba(0,0,0,0.7)]">
-              <FaGithub className="text-lg sm:text-xl" />
-            </a>
+            <IconLink extLink title="GitHub" url="https://github.com/alvarotorrestx" icon={<FaGithub className="text-lg sm:text-xl" />} />
           </li>
           <li>
-            <a href='https://linkedin.com/in/alvarotorrestx' title='LinkedIn' target='_blank'
-              className="inline-flex items-center justify-center p-4 hover:bg-secondary hover:text-base-100 rounded-full transition drop-shadow-[0_0_8px_rgba(255,255,255,0.7)] hover:drop-shadow-[0_0_8px_rgba(0,0,0,0.7)]">
-              <FaLinkedin className="text-lg sm:text-xl" />
-            </a>
+            <IconLink extLink title="LinkedIn" url="https://linkedin.com/in/alvarotorrestx" icon={<FaLinkedin className="text-lg sm:text-xl" />} />
           </li>
           <li>
-            <a href='mailto:alvaro@alvarotorres.dev' title='Email' target='_blank'
-              className="inline-flex items-center justify-center p-4 hover:bg-secondary hover:text-base-100 rounded-full transition drop-shadow-[0_0_8px_rgba(255,255,255,0.7)] hover:drop-shadow-[0_0_8px_rgba(0,0,0,0.7)]">
-              <MdOutlineEmail className="text-lg sm:text-2xl" />
-            </a>
+            <IconLink extLink title="Email" url="mailto:alvaro@alvarotorres.dev" icon={<MdOutlineEmail className="text-lg sm:text-2xl" />} />
           </li>
         </ul>
 
@@ -68,9 +57,9 @@ export default function Home() {
       {/* <About /> */}
 
       <Skills />
-      
+
       <Experience />
-      
+
       <Portfolio />
 
     </>

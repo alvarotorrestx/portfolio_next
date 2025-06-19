@@ -31,8 +31,7 @@ export default function Portfolio() {
 
           return (
             <div key={section} className="space-y-32">
-              <h2 className="text-lg md:text-xl lg:text-2xl font-mono uppercase
-                             tracking-widest text-primary text-start">
+              <h2 className="text-base uppercase tracking-widest text-primary font-mono">
                 {section}
               </h2>
 
@@ -83,7 +82,7 @@ function ProjectRow({
   return (
     <motion.div
       ref={ref}
-      className="grid grid-cols-1 md:flex items-center gap-10"
+      className="grid grid-cols-1 items-center justify-center md:flex md:flex-row md:items-start gap-10"
       style={{ flexDirection: isEven ? "row" : "row-reverse" }}
     >
       <motion.img

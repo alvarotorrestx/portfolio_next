@@ -5,7 +5,9 @@ import projects from "@/app/portfolio/Projects";
 import { motion } from "framer-motion";
 import RevealText from "@/components/RevealText";
 import Link from "@/components/Link";
-import { FiExternalLink } from "react-icons/fi";
+import { FiExternalLink, FiFigma } from "react-icons/fi";
+import { FaGithub } from "react-icons/fa";
+import IconLink from '@/components/IconLink';
 
 export default function ProjectPage() {
   const { id } = useParams();
@@ -17,44 +19,76 @@ export default function ProjectPage() {
     <section className="max-w-6xl mx-auto px-4 py-24">
       <RevealText
         text={project.title}
-        className="text-4xl md:text-5xl lg:text-6xl font-bold text-center"
+        className="text-4xl md:text-5xl lg:text-6xl font-bold text-start"
         bgColor="#252525"
         fgColor="#e70507"
       />
 
-      <div className="mt-12 flex flex-col lg:flex-row gap-12 items-start justify-between">
-        <motion.img
-          src={project.image}
-          alt={project.title}
-          initial={{ opacity: 0, x: -50, rotateZ: -5 }}
-          animate={{ opacity: 1, x: 0, rotateZ: 0 }}
-          transition={{ duration: 0.6 }}
-          className="w-full lg:w-1/2 rounded-lg shadow-lg object-cover max-h-[32rem]"
-        />
-
+      <div className="mt-6 flex flex-col lg:flex-row gap-12 items-start justify-between">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="w-full lg:w-1/2"
+          className="w-full"
         >
-          <p className="text-base-content text-sm mb-4">{project.description}</p>
+          <h2 className="text-lg md:text-xl lg:text-2xl font-mono
+                         tracking-widest text-primary text-start">
+            About Project
+          </h2>
+          <p className="text-base-content text-sm mb-4 lg:max-w-3/4">{project.description}</p>
 
-          <div className="flex flex-wrap gap-2 mb-6">
-            {project.techStack.map((tech, i) => (
-              <span
-                key={i}
-                className="text-sm md:text-base px-2 py-1 border border-accent rounded-lg text-base-content"
-              >
-                {tech}
-              </span>
+          <div className="flex flex-wrap flex-col gap-2 mb-6">
+            <h2 className="text-lg md:text-xl lg:text-2xl font-mono
+                         tracking-widest text-primary text-start">
+              Technology Used
+            </h2>
+
+            <div className="flex flex-wrap gap-2">
+              {project.techStack.map((tech, i) => (
+                <span
+                  key={i}
+                  className="text-sm md:text-base px-2 py-1 border border-accent rounded-lg text-base-content"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+          </div>
+
+          <div className="flex flex-row flex-wrap gap-2 justify-start items-center">
+            {project.github && (
+              <IconLink extLink url={project.github} title="GitHub" icon={<FaGithub className="text-lg sm:text-xl" />} />
+            )}
+            {project.live && (
+              <Link extLink url={project.live} text="Visit Website" icon={<FiExternalLink />} />
+            )}
+          </div>
+
+          <div className="flex flex-col justify-center items-center gap-6 mt-6">
+            {project.figma && project.figma.map((p, i) => (
+              <iframe key={i} width="100%" height="600"
+                src={p} allowFullScreen>
+              </iframe>
             ))}
           </div>
 
-          {project.link && (
-            <Link url={project.link} text="View Project" icon={<FiExternalLink />} />
-          )}
+          <div className="flex flex-col justify-center items-center gap-6 mt-6">
+            {project.page_images && project.page_images.map((img, i) => (
+              <img src={img} key={i} alt={project.title} title={project.title} className="w-full h-auto drop-shadow-[0_0_12px_rgba(255,0,0,1.0)] rounded-lg" />
+            ))}
+          </div>
+
+          <div className="flex flex-col justify-center items-center gap-6 mt-6">
+            {project.demo && (
+              <iframe width="100%" height="500" src={project.demo} title={project.title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+            )}
+          </div>
+
         </motion.div>
+
       </div>
     </section>
   );
