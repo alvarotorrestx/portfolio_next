@@ -194,7 +194,7 @@ const projects = [
     summary: "Open-source MERN full-stack platform for developers to network.",
     description: "DevConnect is a developer-first networking platform designed to help engineers connect, collaborate, and share opportunities. The platform is an open-source MERN full-stack build for developers that supports scalable role-based access control, authentication, and contributor collaboration.",
     image: "/images/projects/project_logos/devconnect.png",
-    page_images: [],
+    page_images: ["/images/projects/project_pages/devconnect_light_dashboard.jpg", "/images/projects/project_pages/devconnect_dark_dashboard.jpg", "/images/projects/project_pages/devconnect_light_profile.jpg"],
     techStack: [
       "React",
       "JavaScript",
