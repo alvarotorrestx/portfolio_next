@@ -25,8 +25,7 @@ export default function ProjectCard({ title, summary, techStack, link }: Project
           {techStack.map((tech, i) => (
             <span
               key={i}
-              className="text-sm md:text-base px-2 py-1 border border-accent rounded-lg text-base-content
-                          transition-all duration-300 ease-in-out"
+              className="text-sm md:text-base px-2 py-1 border border-accent rounded-lg text-base-content"
             >
               {tech}
             </span>

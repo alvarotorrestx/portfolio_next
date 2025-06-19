@@ -4,7 +4,7 @@ import { useParams } from "next/navigation";
 import projects from "@/app/portfolio/Projects";
 import { motion } from "framer-motion";
 import RevealText from "@/components/RevealText";
-import Link from "@/components/Link"; // your reusable Link component
+import Link from "@/components/Link";
 import { FiExternalLink } from "react-icons/fi";
 
 export default function ProjectPage() {
@@ -23,7 +23,6 @@ export default function ProjectPage() {
       />
 
       <div className="mt-12 flex flex-col lg:flex-row gap-12 items-start justify-between">
-        {/* IMAGE */}
         <motion.img
           src={project.image}
           alt={project.title}
@@ -33,7 +32,6 @@ export default function ProjectPage() {
           className="w-full lg:w-1/2 rounded-lg shadow-lg object-cover max-h-[32rem]"
         />
 
-        {/* CONTENT */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -46,7 +44,7 @@ export default function ProjectPage() {
             {project.techStack.map((tech, i) => (
               <span
                 key={i}
-                className="px-3 py-1 rounded-full border border-accent text-xs text-base-content hover:bg-secondary hover:text-base-100 transition"
+                className="text-sm md:text-base px-2 py-1 border border-accent rounded-lg text-base-content"
               >
                 {tech}
               </span>
@@ -54,7 +52,7 @@ export default function ProjectPage() {
           </div>
 
           {project.link && (
-            <Link url={project.link} text="View Project" icon={<FiExternalLink />} newPage />
+            <Link url={project.link} text="View Project" icon={<FiExternalLink />} />
           )}
         </motion.div>
       </div>
