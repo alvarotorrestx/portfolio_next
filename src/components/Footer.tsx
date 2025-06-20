@@ -37,7 +37,7 @@ const Footer = () => {
                     Theme inspired by Batman Beyond.
                     <img src="/images/icons/cursor.png" className="w-5" />
                 </p>
-                <p>Copyright© {new Date().getFullYear()}.  Alvaro Torres. All right reserved.</p>
+                <p>Copyright© {new Date().getFullYear()}.  Alvaro Torres. All Right Reserved.</p>
                 <button onClick={() => setOpen(true)} className='font-bold p-4 text-primary hover:underline cursor-pointer'>Artwork Credits</button>
             </aside>
 
