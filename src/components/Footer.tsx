@@ -32,10 +32,10 @@ const Footer = () => {
             </nav>
 
             <aside>
-                <img src="/images/brand/banner_red.png" className="w-35 md:w-50" />
+                <img src="/images/brand/banner_red.png" alt="Logo Banner" className="w-35 md:w-50" />
                 <p className="font-bold flex flex-row gap-2 justify-center items-center">
                     Theme inspired by Batman Beyond.
-                    <img src="/images/icons/cursor.png" className="w-5" />
+                    <img src="/images/icons/cursor.png" alt="Batman Beyond Logo" className="w-5" />
                 </p>
                 <p>Copyright© {new Date().getFullYear()}.  Alvaro Torres. All Right Reserved.</p>
                 <button onClick={() => setOpen(true)} className='font-bold p-4 text-primary hover:underline cursor-pointer'>Artwork Credits</button>

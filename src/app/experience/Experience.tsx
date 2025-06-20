@@ -45,6 +45,39 @@ const experiences: Experience[] = [
     },
 ];
 
+function TimelineEntry({ exp }: { exp: Experience }) {
+    const ref = useRef<HTMLDivElement>(null);
+
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["start 100%", "end 10%"],
+    });
+
+    const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
+    const y = useTransform(scrollYProgress, [0, 0.2], [20, 0]);
+
+    return (
+        <motion.div
+            ref={ref}
+            style={{ opacity, y }}
+            className="[&:not(:last-child)]:mb-8 ml-6 relative rounded-sm"
+        >
+            <span className="absolute -left-[40.5px] top-1.5 w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-md">
+                <GiBatMask className="text-black text-lg" />
+            </span>
+
+            <div className="border border-accent p-6 rounded-lg transition-all">
+                <h3 className="text-lg font-semibold text-primary">{exp.title}</h3>
+                <p className="text-base-content font-medium mb-1">{exp.company}</p>
+                <span className="text-sm text-gray-400 italic mb-3 block">{exp.date}</span>
+                <p className="text-base-content text-sm font-semibold leading-relaxed">
+                    {exp.description}
+                </p>
+            </div>
+        </motion.div>
+    );
+}
+
 const Experience = () => {
     return (
         <section id="experience" className="py-10 px-4 max-w-[52rem] mx-auto w-full flex flex-col justify-center items-center">
@@ -56,44 +89,9 @@ const Experience = () => {
             />
 
             <div className="relative my-12 border-l-2 border-primary">
-                {experiences.map((exp, index) => {
-                    const ref = useRef<HTMLDivElement>(null);
-                    const { scrollYProgress } = useScroll({
-                        target: ref,
-                        offset: ["start 100%", "end 10%"],
-                    });
-
-                    const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
-                    const y = useTransform(scrollYProgress, [0, 0.2], [20, 0]);
-
-                    return (
-                        <motion.div
-                            key={`${exp.company}-${index}`}
-                            ref={ref}
-                            style={{ opacity, y }}
-                            className="[&:not(:last-child)]:mb-8 ml-6 relative rounded-sm"
-                        >
-                            <span className="absolute -left-[40.5px] top-1.5 w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-md">
-                                <GiBatMask className="text-black text-lg" />
-                            </span>
-
-                            <div className="border border-accent p-6 rounded-lg transition-all">
-                                <h3 className="text-lg font-semibold text-primary">
-                                    {exp.title}
-                                </h3>
-                                <p className="text-base-content font-medium mb-1">
-                                    {exp.company}
-                                </p>
-                                <span className="text-sm text-gray-400 italic mb-3 block">
-                                    {exp.date}
-                                </span>
-                                <p className="text-base-content text-sm font-semibold leading-relaxed">
-                                    {exp.description}
-                                </p>
-                            </div>
-                        </motion.div>
-                    );
-                })}
+                {experiences.map((exp, index) => (
+                    <TimelineEntry key={`${exp.company}-${index}`} exp={exp} />
+                ))}
             </div>
 
             {/* Resume Link */}

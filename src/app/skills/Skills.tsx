@@ -2,12 +2,39 @@
 
 import { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
+import { IconType } from "react-icons";
 import { SiJavascript, SiTypescript, SiDatabricks, SiHtml5, SiCss3, SiNextdotjs, SiVuedotjs, SiExpress, SiGithubactions, SiReact, SiTailwindcss, SiNodedotjs, SiCplusplus, SiMongoose, SiPhp, SiFirebase, SiMongodb, SiDocker, SiPostman } from "react-icons/si";
 import { FaJava } from "react-icons/fa6";
 import { TbSql, TbBrandMysql } from "react-icons/tb";
 import { FaGitAlt } from "react-icons/fa";
 import { GrGoogle } from "react-icons/gr";
 import RevealText from "@/components/RevealText";
+
+function SkillPill({ name, Icon }: { name: string; Icon: IconType }) {
+    const ref = useRef<HTMLDivElement>(null);
+
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["start 100%", "end 10%"],
+    });
+
+    const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
+    const y = useTransform(scrollYProgress, [0, 0.2], [20, 0]);
+
+    return (
+        <motion.div
+            ref={ref}
+            style={{ opacity, y }}
+            className="flex items-center gap-2 sm:gap-3 px-3 py-2 sm:px-4 sm:py-3 border border-accent rounded-lg
+                 transition-all duration-300 ease-in-out"
+        >
+            <Icon className="text-primary text-lg sm:text-2xl flex-shrink-0" />
+            <span className="text-xs sm:text-sm font-medium text-base-content uppercase whitespace-nowrap">
+                {name}
+            </span>
+        </motion.div>
+    );
+}
 
 const skills = {
     "Languages": [
@@ -70,34 +97,9 @@ export default function Skills() {
 
                         {/* skills pills */}
                         <div className="flex flex-wrap gap-4">
-                            {items.map((skill, i) => {
-                                const ref = useRef(null);
-                                const { scrollYProgress } = useScroll({
-                                    target: ref,
-                                    offset: ["start 100%", "end 10%"],
-                                });
-                                const opacity = useTransform(
-                                    scrollYProgress,
-                                    [0, 0.2, 0.8, 1],
-                                    [0, 1, 1, 0]
-                                );
-                                const y = useTransform(scrollYProgress, [0, 0.2], [20, 0]);
-
-                                return (
-                                    <motion.div
-                                        key={skill.name}
-                                        ref={ref}
-                                        style={{ opacity, y }}
-                                        className="flex items-center gap-2 sm:gap-3 px-3 py-2 sm:px-4 sm:py-3 border border-accent rounded-lg
-                                        transition-all duration-300 ease-in-out"
-                                    >
-                                        <skill.icon className="text-primary text-lg sm:text-2xl flex-shrink-0" />
-                                        <span className="text-xs sm:text-sm font-medium text-base-content uppercase whitespace-nowrap">
-                                            {skill.name}
-                                        </span>
-                                    </motion.div>
-                                );
-                            })}
+                            {items.map(({ name, icon: Icon }) => (
+                                <SkillPill key={name} name={name} Icon={Icon} />
+                            ))}
                         </div>
                     </div>
                 ))}

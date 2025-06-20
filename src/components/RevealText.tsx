@@ -23,9 +23,10 @@ export default function RevealText({
   const containerRef = useRef<HTMLParagraphElement | null>(null);
 
   useEffect(() => {
-    if (!containerRef.current) return;
+    const current = containerRef.current;
+    if (!current) return;
 
-    const split = new SplitType(containerRef.current, { types: "words" });
+    const split = new SplitType(current, { types: "words" });
 
     split.words.forEach((w) => {
       w.classList.add("reveal-glow");
@@ -41,7 +42,7 @@ export default function RevealText({
         stagger: 0.02,
         ease: "none",
         scrollTrigger: {
-          trigger: containerRef.current,
+          trigger: current,
           start: "top 80%",
           end: "top 20%",
           scrub: true,
@@ -51,7 +52,8 @@ export default function RevealText({
 
     return () => {
       tween.revert();
-      ScrollTrigger.getById(containerRef.current as any)?.kill();
+      const trigger = ScrollTrigger.getById(current as unknown as string);
+      if (trigger) trigger.kill();
     };
   }, [bgColor, fgColor]);
 

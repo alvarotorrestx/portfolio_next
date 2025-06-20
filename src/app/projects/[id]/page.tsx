@@ -13,12 +13,12 @@ import { PAGE_TRANSITION_DURATION } from '@/utils/Constants';
 import PageTransition from "@/components/PageTransition";
 
 export default function ProjectPage() {
+  const router = useRouter();
   const { id } = useParams();
   const project = projects.find((p) => p.id === id);
 
   if (!project) return <div className="text-center text-white py-20">Project not found.</div>;
 
-  const router = useRouter();
 
   return (
     <PageTransition>
