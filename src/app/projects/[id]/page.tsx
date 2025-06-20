@@ -90,7 +90,7 @@ export default function ProjectPage() {
               <div className="flex flex-col justify-center items-center gap-6 mt-6">
                 {project.figma.map((p, i) => (
                   <iframe key={i} width="100%" height="600"
-                    src={p} allowFullScreen>
+                    src={p} className="drop-shadow-[0_0_12px_rgba(255,0,0,1.0)] rounded-lg" allowFullScreen>
                   </iframe>
                 ))}
               </div>
@@ -106,7 +106,7 @@ export default function ProjectPage() {
 
             {project.demo && (
               <div className="flex flex-col justify-center items-center gap-6 mt-6">
-                <iframe width="100%" height="500" src={project.demo} title={project.title}
+                <iframe width="100%" height="500" className="drop-shadow-[0_0_12px_rgba(255,0,0,1.0)] rounded-lg" src={project.demo} title={project.title}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
               </div>

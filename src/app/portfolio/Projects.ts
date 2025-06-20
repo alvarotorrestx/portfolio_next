@@ -155,7 +155,7 @@ const projects = [
     summary: "Custom calculator with singleton button factory pattern in C++.",
     description: "A scientific calculator application that provides an interactive GUI with dynamically created buttons using a Singleton Pattern Button Factory, allowing for a flexible and scalable design.",
     image: "/images/projects/project_logos/scientific_calculator.jpg",
-    page_images: [],
+    page_images: ["/images/projects/project_pages/scientific_calculator_default.png", "/images/projects/project_pages/scientific_calculator_result.png", "/images/projects/project_pages/scientific_calculator_pemdas.png", "/images/projects/project_pages/scientific_calculator_pemdas_result.png"],
     techStack: [
       "C++",
       "wxWidgets",
@@ -218,7 +218,7 @@ const projects = [
     summary: "Personal developer portfolio built with modern frameworks and UI libraries.",
     description: "A sleek, one-page developer portfolio showcasing my work, experience, and skills. Built using Next.js, TypeScript, and TailwindCSS, it features smooth scroll animations with Framer Motion, responsive design, and dynamic sections powered by structured data for projects and experience.",
     image: "/images/projects/project_logos/portfolio.jpg",
-    page_images: [],
+    page_images: ["/images/projects/project_pages/portfolio_header.png", "/images/projects/project_pages/portfolio_skills.png", "/images/projects/project_pages/portfolio_experience.png", "/images/projects/project_pages/portfolio_projects.png", "/images/projects/project_pages/portfolio_contact.png"],
     techStack: [
       "Next.js",
       "React",
