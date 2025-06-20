@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 export default function BackgroundVideo() {
   const wrapperRef = useRef<HTMLDivElement>(null);
-  const videoRef   = useRef<HTMLVideoElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   const [loaded, setLoaded] = useState(false);
 
@@ -45,6 +45,9 @@ export default function BackgroundVideo() {
           <source src="/videos/bg_video.mp4" type="video/mp4" />
         </video>
       )}
+      <span className="select-none font-mono absolute bottom-0 right-0 italic text-[.5rem] md:text-[.6rem] lg:text-[.7rem] font-syne p-4 text-primary drop-shadow-[0_0_4px_rgba(255,0,0,1.0)]">
+        Software Engineer by day... Architect of code by night.
+      </span>
     </div>
   );
 }

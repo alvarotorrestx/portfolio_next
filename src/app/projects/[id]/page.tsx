@@ -8,6 +8,8 @@ import Link from "@/components/Link";
 import { FiExternalLink, FiFigma } from "react-icons/fi";
 import { FaGithub } from "react-icons/fa";
 import IconLink from '@/components/IconLink';
+import { PAGE_TRANSITION_DURATION } from '@/utils/Constants';
+import PageTransition from "@/components/PageTransition";
 
 export default function ProjectPage() {
   const { id } = useParams();
@@ -16,92 +18,94 @@ export default function ProjectPage() {
   if (!project) return <div className="text-center text-white py-20">Project not found.</div>;
 
   return (
-    <section className="max-w-6xl mx-auto px-4 py-24">
-      <RevealText
-        text={project.title}
-        className="text-4xl md:text-5xl lg:text-6xl font-bold text-start"
-        bgColor="#252525"
-        fgColor="#e70507"
-      />
+    <PageTransition>
+      <section className="max-w-6xl mx-auto px-4 py-24">
+        <RevealText
+          text={project.title}
+          className="text-4xl md:text-5xl lg:text-6xl font-bold text-start"
+          bgColor="#252525"
+          fgColor="#e70507"
+        />
 
-      <div className="mt-6 flex flex-col lg:flex-row gap-12 items-start justify-between">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="w-full"
-        >
-          <h2 className="text-lg md:text-xl lg:text-2xl font-mono
-                         tracking-widest text-primary text-start">
-            About Project
-          </h2>
-          <p className="text-base-content text-sm mb-4 lg:max-w-3/4">{project.description}</p>
-
-          <div className="flex flex-wrap flex-col gap-2 mb-6">
+        <div className="mt-6 flex flex-col lg:flex-row gap-12 items-start justify-between">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: PAGE_TRANSITION_DURATION + 0.1 }}
+            className="w-full"
+          >
             <h2 className="text-lg md:text-xl lg:text-2xl font-mono
                          tracking-widest text-primary text-start">
-              Technology Used
+              About Project
             </h2>
+            <p className="text-base-content text-sm mb-4 lg:max-w-3/4">{project.description}</p>
 
-            <div className="flex flex-wrap gap-2">
-              {project.techStack.map((tech, i) => (
-                <span
-                  key={i}
-                  className="text-sm md:text-base px-2 py-1 border border-accent rounded-lg text-base-content"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-
-          </div>
-
-          {(project.github || project.live) && (
-            <div className="flex flex-wrap flex-col mb-6">
+            <div className="flex flex-wrap flex-col gap-2 mb-6">
               <h2 className="text-lg md:text-xl lg:text-2xl font-mono
                          tracking-widest text-primary text-start">
-                Explore
+                Technology Used
               </h2>
-              <div className="flex flex-row flex-wrap gap-2.5 justify-start items-center">
-                {project.github && (
-                  <IconLink extLink url={project.github} title="GitHub" icon={<FaGithub className="text-2xl" />} />
-                )}
-                {project.live && (
-                  <Link extLink url={project.live} text="Visit Website" icon={<FiExternalLink />} />
-                )}
+
+              <div className="flex flex-wrap gap-2">
+                {project.techStack.map((tech, i) => (
+                  <span
+                    key={i}
+                    className="text-sm md:text-base px-2 py-1 border border-accent rounded-lg text-base-content"
+                  >
+                    {tech}
+                  </span>
+                ))}
               </div>
+
             </div>
-          )}
 
-          {project.figma?.length > 0 && (
-            <div className="flex flex-col justify-center items-center gap-6 mt-6">
-              {project.figma.map((p, i) => (
-                <iframe key={i} width="100%" height="600"
-                  src={p} allowFullScreen>
-                </iframe>
-              ))}
-            </div>
-          )}
+            {(project.github || project.live) && (
+              <div className="flex flex-wrap flex-col mb-6">
+                <h2 className="text-lg md:text-xl lg:text-2xl font-mono
+                         tracking-widest text-primary text-start">
+                  Explore
+                </h2>
+                <div className="flex flex-row flex-wrap gap-2.5 justify-start items-center">
+                  {project.github && (
+                    <IconLink extLink url={project.github} title="GitHub" icon={<FaGithub className="text-2xl" />} />
+                  )}
+                  {project.live && (
+                    <Link extLink url={project.live} text="Visit Website" icon={<FiExternalLink />} />
+                  )}
+                </div>
+              </div>
+            )}
 
-          {project.page_images?.length > 0 && (
-            <div className="flex flex-col justify-center items-center gap-6 mt-6">
-              {project.page_images.map((img, i) => (
-                <img src={img} key={i} alt={project.title} title={project.title} className="w-full h-auto drop-shadow-[0_0_12px_rgba(255,0,0,1.0)] rounded-lg" />
-              ))}
-            </div>
-          )}
+            {project.figma?.length > 0 && (
+              <div className="flex flex-col justify-center items-center gap-6 mt-6">
+                {project.figma.map((p, i) => (
+                  <iframe key={i} width="100%" height="600"
+                    src={p} allowFullScreen>
+                  </iframe>
+                ))}
+              </div>
+            )}
 
-          {project.demo && (
-            <div className="flex flex-col justify-center items-center gap-6 mt-6">
-              <iframe width="100%" height="500" src={project.demo} title={project.title}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-            </div>
-          )}
+            {project.page_images?.length > 0 && (
+              <div className="flex flex-col justify-center items-center gap-6 mt-6">
+                {project.page_images.map((img, i) => (
+                  <img src={img} key={i} alt={project.title} title={project.title} className="w-full h-auto drop-shadow-[0_0_12px_rgba(255,0,0,1.0)] rounded-lg" />
+                ))}
+              </div>
+            )}
 
-        </motion.div>
+            {project.demo && (
+              <div className="flex flex-col justify-center items-center gap-6 mt-6">
+                <iframe width="100%" height="500" src={project.demo} title={project.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+              </div>
+            )}
 
-      </div>
-    </section>
+          </motion.div>
+
+        </div>
+      </section>
+    </PageTransition>
   );
 }
