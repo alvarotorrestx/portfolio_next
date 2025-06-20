@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 import CustomCursor from "@/components/CustomCursor";
 import Footer from '@/components/Footer'
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Alvaro Torres | Full-Stack Software Engineer",
-  authors: [{name: "Alvaro Torres - @alvartorrestx", url: "https://alvarotorres.dev"}],
+  authors: [{ name: "Alvaro Torres - @alvartorrestx", url: "https://alvarotorres.dev" }],
   description: "Software Engineer with startup experience in full-stack development and leading scalable, user-centric technology. Proficient in JavaScript, TypeScript, Java, C++, PHP, and more; seeking full-time/internship roles.",
   keywords: ["Full-Stack Developer", "Alvaro Torres", "React", "JavaScript", "C++", "Java", "PHP", "Software Engineer", "Software Developer", "Web Developer", "Back-end Developer", "Front-end Developer"],
   metadataBase: new URL("https://alvarotorres.dev"),
@@ -43,6 +44,24 @@ export default function RootLayout({
         />
       </head>
       <body className="transition-colors duration-500 font-sans antialiased scroll-smooth">
+        {/* Google Tag Manager */}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-QYB3H5EX9S"
+        />
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-QYB3H5EX9S');
+            `,
+          }}
+        />
+        
         <CustomCursor />
         <main className="px-2 md:px-10 lg:px-20 xl:px-40 flex items-center justify-center flex-col">
           {children}
