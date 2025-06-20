@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Alvaro Torres | Full-Stack Software Engineer",
     description: "Software Engineer with startup experience in full-stack development and leading scalable, user-centric technology. Proficient in JavaScript, TypeScript, Java, C++, PHP, and more; seeking full-time/internship roles.",
-    images: ["/images/brand/logo_red.png"],
+    images: ["/images/brand/logo_seo.jpg"],
     url: "/",
     type: "website",
   },
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Alvaro Torres | Full-Stack Software Engineer",
     description: "Software Engineer with startup experience in full-stack development and leading scalable, user-centric technology. Proficient in JavaScript, TypeScript, Java, C++, PHP, and more; seeking full-time/internship roles.",
-    images: ["/images/brand/logo_red.png"],
+    images: ["/images/brand/logo_seo.jpg"],
   },
 };
 
