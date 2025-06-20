@@ -25,8 +25,8 @@ const projects = [
   {
     id: "hacienda_mobile_home_sales",
     title: "Hacienda Mobile Home Sales",
-    summary: "Mobile home real estate website redesign and PHP/MySQL to WiX migration.",
-    description: "Hacienda Mobile Home Sales is a mobile home real estate company that contracted me to redesign their company website; migrating from a legacy PHP/MySQL website to the WiX CMS.",
+    summary: "Mobile home real estate website redesign and PHP/MySQL to Wix migration.",
+    description: "Hacienda Mobile Home Sales is a mobile home real estate company that contracted me to redesign their company website; migrating from a legacy PHP/MySQL website to the Wix CMS.",
     image: "/images/projects/business_logos/hacienda.jpg",
     page_images: ["/images/projects/business_pages/hacienda_website.png"],
     techStack: [
@@ -35,7 +35,7 @@ const projects = [
       "MySQL",
       "HTML",
       "CSS",
-      "WIX"
+      "Wix"
     ],
     link: "/projects/hacienda_mobile_home_sales",
     github: "",
@@ -137,7 +137,7 @@ const projects = [
       "HTML",
       "CSS",
       "Webflow",
-      "WiX",
+      "Wix",
       "Shopify",
       "WordPress",
       "Squarespace",

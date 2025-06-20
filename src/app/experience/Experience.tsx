@@ -27,7 +27,7 @@ const experiences: Experience[] = [
         company: "Simulint Innovations",
         date: "June 2021 - Present",
         description:
-            "Delivering custom web solutions for small businesses using React, JavaScript, and modern CMS platforms like Wix, Shopify, WordPress, Webflow and Squarespace. Projects focus on UI component design, performance optimization, and third-party integrations to drive user engagement and client conversions.",
+            "Delivering custom web solutions for small businesses using React, Next.js, JavaScript, TypeScript and modern CMS platforms like Wix, Shopify, WordPress, Webflow and Squarespace. Projects focus on UI component design, performance optimization, and third-party integrations to drive user engagement and client conversions.",
     },
     {
         title: "Lead Back-End Software Engineer",
@@ -41,7 +41,7 @@ const experiences: Experience[] = [
         company: "Hacienda Mobile Home Sales",
         date: "July 2021 - January 2024",
         description:
-            "Led digital transformation by migrating the company website from a legacy PHP/MySQL stack to WiX and automating inventory workflows with VBA and JSON. Directed a hybrid team to deliver agile updates, enhance UX, and cut latency by over 60% through front-end rebuilds and CI/CD pipelines.",
+            "Led digital transformation by migrating the company website from a legacy PHP/MySQL stack to Wix and automating inventory workflows with VBA and JSON. Directed a hybrid team to deliver agile updates, enhance UX, and cut latency by over 60% through front-end rebuilds and CI/CD pipelines.",
     },
 ];
 
