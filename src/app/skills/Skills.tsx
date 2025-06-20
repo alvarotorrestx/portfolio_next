@@ -52,7 +52,7 @@ const skills = {
 
 export default function Skills() {
     return (
-        <section className="pb-10 pt-20 px-4 max-w-5xl mx-auto w-full flex flex-col justify-center items-center">
+        <section id="skills" className="pb-10 pt-20 px-4 max-w-5xl mx-auto w-full flex flex-col justify-center items-center">
             <RevealText
                 text="Tech Stack"
                 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center"

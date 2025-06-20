@@ -1,42 +1,51 @@
 "use client";
 
-import { MdOutlineMenu, MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
-// import { useTheme } from "@/app/context/ThemeContext";
+import { Link as ScrollLink } from "react-scroll";
+import { motion } from "framer-motion";
+import { FaEnvelope } from "react-icons/fa";
 
-const NavBar = () => {
-    // const { darkMode, actions } = useTheme();
+const navLinks = [
+    { name: "Home", to: "home" },
+    { name: "Skills", to: "skills" },
+    { name: "Experience", to: "experience" },
+    { name: "Portfolio", to: "portfolio" },
+];
 
+export default function NavBar() {
     return (
-        <div className="px-2 md:px-10 lg:px-20 xl:px-40 navbar w-full flex justify-between items-center fixed top-0">
+        <motion.nav
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            className="hidden md:flex fixed top-0 left-1/2 translate-x-[-50%] z-50 backdrop-blur bg-black/40 rounded-full p-6 mt-6"
+        >
+            <div className="flex gap-6 items-center font-mono text-sm md:text-base uppercase">
+                {navLinks.map(({ name, to }) => (
+                    <ScrollLink
+                        key={to}
+                        to={to}
+                        smooth={true}
+                        duration={600}
+                        offset={-80}
+                        spy={true}
+                        hashSpy={true}
+                        isDynamic={true}
+                        activeClass="text-primary"
+                        className="cursor-pointer hover:text-primary transition-all"
+                    >   
 
-            {/* Logo */}
-            <div className="navbar-start">
-                <a href='/' className="link">
-                    <img src="/images/brand/banner.png" alt="Logo" className="max-w-[115px] sm:max-w-[175px]" />
+                        {name}
+                    </ScrollLink>
+                ))}
+
+                <a
+                    href="mailto:alvaro@alvarotorres.dev"
+                    className="flex justify-center items-center gap-1 cursor-pointer text-primary drop-shadow-[0_0_6px_red] transition-all"
+                    title="Send Email"
+                >
+                    Contact <FaEnvelope className="text-base" />
                 </a>
             </div>
-
-            {/* Theme Swap */}
-            {/* <div role="button" onClick={actions.toggleTheme} className="btn btn-ghost btn-circle">
-                {darkMode ?
-                    <MdOutlineLightMode className="text-lg sm:text-xl" />
-                    :
-                    <MdOutlineDarkMode className="text-lg sm:text-xl" />
-                }
-            </div> */}
-
-
-            {/* Menu */}
-            <div className="navbar-end">
-                <div>
-                    <span className="text-xs sm:text-base uppercase font-syne">Menu</span>
-                </div>
-                <div role="button" className="btn btn-ghost btn-circle">
-                    <MdOutlineMenu className="text-lg sm:text-xl" />
-                </div>
-            </div>
-        </div>
-    )
+        </motion.nav>
+    );
 }
-
-export default NavBar

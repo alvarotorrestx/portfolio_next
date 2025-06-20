@@ -2,12 +2,13 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { GrDocumentPdf } from "react-icons/gr";
 import { MdOutlineEmail } from "react-icons/md";
 import BackgroundVideo from "@/components/BackgroundVideo";
-import About from './about/About';
 import Skills from "./skills/Skills";
 import Experience from "./experience/Experience";
 import Portfolio from "./portfolio/Portfolio";
 import IconLink from '@/components/IconLink';
 import PageTransition from "@/components/PageTransition";
+import NavBar from "@/components/NavBar";
+import MobileNav from "@/components/MobileNav";
 
 export default function Home() {
   return (
@@ -16,6 +17,9 @@ export default function Home() {
       <BackgroundVideo />
 
       <PageTransition>
+
+        <MobileNav />
+        <NavBar />
 
         <section className="min-h-screen flex flex-col items-center justify-center space-y-6 flex-wrap px-2">
 
@@ -54,8 +58,6 @@ export default function Home() {
           </ul>
 
         </section>
-
-        {/* <About /> */}
 
         <Skills />
 

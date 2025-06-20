@@ -15,7 +15,7 @@ export default function Portfolio() {
   }, {});
 
   return (
-    <section className="max-w-[550px] md:max-w-[1600px] py-20 px-4 mx-auto
+    <section id="portfolio" className="max-w-[550px] md:max-w-[1600px] py-20 px-4 mx-auto
                         w-full flex flex-col justify-center items-center overflow-hidden">
       <RevealText
         text="Portfolio"

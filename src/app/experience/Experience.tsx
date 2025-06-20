@@ -47,7 +47,7 @@ const experiences: Experience[] = [
 
 const Experience = () => {
     return (
-        <section className="py-10 px-4 max-w-[52rem] mx-auto w-full flex flex-col justify-center items-center">
+        <section id="experience" className="py-10 px-4 max-w-[52rem] mx-auto w-full flex flex-col justify-center items-center">
             <RevealText
                 text="Experience"
                 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center"

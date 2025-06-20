@@ -11,13 +11,6 @@
   --color-base-100: "#000";
   --color-base-content: "#F2EFEA";
 }
- /* @plugin "daisyui/theme" {
-  name: "light";
-  default: true;
-  --color-primary: "#00b6ff";
-  --color-secondary: "#75d9ff";
-  --color-accent: "#0070ab";
-} */
 
 .reveal-glow{
   text-shadow:0 0 12px rgba(231,5,7,var(--glow,0));

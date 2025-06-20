@@ -27,6 +27,7 @@ export default function BackgroundVideo() {
 
   return (
     <div
+      id="home"
       ref={wrapperRef}
       className="absolute inset-0 w-full h-full -z-10 overflow-hidden"
     >
