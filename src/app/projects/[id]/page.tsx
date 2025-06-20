@@ -1,11 +1,12 @@
 "use client";
 
 import { useParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import projects from "@/app/portfolio/Projects";
 import { motion } from "framer-motion";
 import RevealText from "@/components/RevealText";
-import Link from "@/components/Link";
-import { FiExternalLink, FiFigma } from "react-icons/fi";
+import CTALink from "@/components/CTALink";
+import { FiExternalLink, FiArrowLeft } from "react-icons/fi";
 import { FaGithub } from "react-icons/fa";
 import IconLink from '@/components/IconLink';
 import { PAGE_TRANSITION_DURATION } from '@/utils/Constants';
@@ -17,9 +18,18 @@ export default function ProjectPage() {
 
   if (!project) return <div className="text-center text-white py-20">Project not found.</div>;
 
+  const router = useRouter();
+
   return (
     <PageTransition>
       <section className="max-w-6xl mx-auto px-4 py-24">
+        <button
+          onClick={() => router.back()}
+          className="cursor-pointer text-lg text-base-content hover:text-primary transition-all inline-flex justify-center items-center mb-6 gap-1"
+        >
+          <FiArrowLeft /> Back to Projects
+        </button>
+
         <RevealText
           text={project.title}
           className="text-4xl md:text-5xl lg:text-6xl font-bold text-start"
@@ -70,7 +80,7 @@ export default function ProjectPage() {
                     <IconLink extLink url={project.github} title="GitHub" icon={<FaGithub className="text-2xl" />} />
                   )}
                   {project.live && (
-                    <Link extLink url={project.live} text="Visit Website" icon={<FiExternalLink />} />
+                    <CTALink extLink url={project.live} text="Visit Website" icon={<FiExternalLink />} />
                   )}
                 </div>
               </div>

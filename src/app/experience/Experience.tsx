@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { GiBatMask } from "react-icons/gi";
 import { FiExternalLink } from "react-icons/fi";
 import RevealText from '@/components/RevealText'
-import Link from "@/components/Link";
+import CTALink from "@/components/CTALink";
 
 type Experience = {
     title: string;
@@ -97,7 +97,7 @@ const Experience = () => {
             </div>
 
             {/* Resume Link */}
-            <Link extLink url={"/documents/Alvaro_Torres_Resume.pdf"} text={"View My Resume"} icon={<FiExternalLink />} />
+            <CTALink extLink url={"/documents/Alvaro_Torres_Resume.pdf"} text={"View My Resume"} icon={<FiExternalLink />} />
 
         </section>
     )

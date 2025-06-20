@@ -1,4 +1,4 @@
-import Link from "@/components/Link";
+import CTALink from "@/components/CTALink";
 import { motion } from "framer-motion";
 import { MdArrowForward } from "react-icons/md";
 
@@ -32,7 +32,7 @@ export default function ProjectCard({ title, summary, techStack, link }: Project
           ))}
         </div>
         {link && (
-          <Link url={link} text={"View Project"} icon={<MdArrowForward className="text-lg sm:text-2xl" />} />
+          <CTALink url={link} text={"View Project"} icon={<MdArrowForward className="text-lg sm:text-2xl" />} />
         )}
       </div>
     </motion.div>

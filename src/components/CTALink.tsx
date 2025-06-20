@@ -10,7 +10,7 @@ type LinkProps = {
   icon?: ReactNode;
 };
 
-const Link = ({ extLink = false, url, text, icon }: LinkProps) => {
+const CTALink = ({ extLink = false, url, text, icon }: LinkProps) => {
   const classes =
     `
       justify-center px-4 py-3 my-4 group inline-flex items-center gap-2 rounded-lg
@@ -42,4 +42,4 @@ const Link = ({ extLink = false, url, text, icon }: LinkProps) => {
   );
 };
 
-export default Link;
+export default CTALink;
