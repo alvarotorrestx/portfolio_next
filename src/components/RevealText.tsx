@@ -28,10 +28,12 @@ export default function RevealText({
 
     const split = new SplitType(current, { types: "words" });
 
-    split.words.forEach((w) => {
-      w.classList.add("reveal-glow");
-      (w as HTMLElement).style.setProperty("--glow", "0");
-    });
+    if (split.words) {
+      split.words.forEach((w) => {
+        w.classList.add("reveal-glow");
+        (w as HTMLElement).style.setProperty("--glow", "0");
+      });
+    }
 
     const tween = gsap.fromTo(
       split.words,
