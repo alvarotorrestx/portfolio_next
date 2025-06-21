@@ -30,7 +30,7 @@ export default function ProjectPage() {
             if (fromSameOrigin) {
               router.back();
             } else {
-              router.push("/");
+              router.push("/#portfolio");
             }
           }}
 
