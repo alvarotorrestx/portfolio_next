@@ -24,7 +24,16 @@ export default function ProjectPage() {
     <PageTransition>
       <section className="max-w-6xl mx-auto px-4 py-24">
         <button
-          onClick={() => router.back()}
+          onClick={() => {
+            const fromSameOrigin = document.referrer.startsWith(window.location.origin);
+
+            if (fromSameOrigin) {
+              router.back();
+            } else {
+              router.push("/");
+            }
+          }}
+
           className="cursor-pointer text-lg text-base-content hover:text-primary transition-all inline-flex justify-center items-center mb-6 gap-1"
         >
           <FiArrowLeft /> Back to Projects
