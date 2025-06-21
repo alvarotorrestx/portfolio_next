@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { FiArrowLeft } from "react-icons/fi";
-import { GiBatMask } from "react-icons/gi";
 
 export default function NotFound() {
     return (
