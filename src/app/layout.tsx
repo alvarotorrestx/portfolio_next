@@ -7,13 +7,13 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "Alvaro Torres | Full-Stack Software Engineer",
   authors: [{ name: "Alvaro Torres - @alvartorrestx", url: "https://alvarotorres.dev" }],
-  description: "Software Engineer with startup experience in full-stack development and leading scalable, user-centric technology. Proficient in JavaScript, TypeScript, Java, C++, PHP, and more; seeking full-time/internship roles.",
-  keywords: ["Full-Stack Developer", "Alvaro Torres", "React", "JavaScript", "C++", "Java", "PHP", "Software Engineer", "Software Developer", "Web Developer", "Back-end Developer", "Front-end Developer"],
+  description: "Software Engineer with startup experience in full-stack development and leading scalable, user-centric technology. Proficient in JavaScript, TypeScript, Java, Python, C++, PHP, and more; seeking full-time/internship roles.",
+  keywords: ["Full-Stack Developer", "Alvaro Torres", "React", "JavaScript", "C++", "Java", "Python", "PHP", "Software Engineer", "Software Developer", "Web Developer", "Back-end Developer", "Front-end Developer"],
   metadataBase: new URL("https://alvarotorres.dev"),
   viewport: "width=device-width, initial-scale=1",
   openGraph: {
     title: "Alvaro Torres | Full-Stack Software Engineer",
-    description: "Software Engineer with startup experience in full-stack development and leading scalable, user-centric technology. Proficient in JavaScript, TypeScript, Java, C++, PHP, and more; seeking full-time/internship roles.",
+    description: "Software Engineer with startup experience in full-stack development and leading scalable, user-centric technology. Proficient in JavaScript, TypeScript, Java, Python, C++, PHP, and more; seeking full-time/internship roles.",
     images: ["/images/brand/logo_seo.jpg"],
     url: "/",
     type: "website",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Alvaro Torres | Full-Stack Software Engineer",
-    description: "Software Engineer with startup experience in full-stack development and leading scalable, user-centric technology. Proficient in JavaScript, TypeScript, Java, C++, PHP, and more; seeking full-time/internship roles.",
+    description: "Software Engineer with startup experience in full-stack development and leading scalable, user-centric technology. Proficient in JavaScript, TypeScript, Java, Python, C++, PHP, and more; seeking full-time/internship roles.",
     images: ["/images/brand/logo_seo.jpg"],
   },
 };

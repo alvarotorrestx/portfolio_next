@@ -16,18 +16,25 @@ type Experience = {
 
 const experiences: Experience[] = [
     {
-        title: "Lead Full-Stack Software Engineer",
-        company: "DevConnect",
-        date: "March 2025 - Present",
+        title: "Founder & Full-Stack Software Engineer",
+        company: "SkipAPI",
+        date: "July 2025 - Present",
         description:
-            "Building a MERN-based developer platform with modular, scalable architecture and role-based access control. Leading front and back-end development, API design, and accessibility improvements while coordinating open-source contributors through GitHub and Discord.",
+        "Designed and built an AI-powered SaaS platform that generates scalable backend APIs from natural language prompts. Engineered authentication, rate limiting with Redis, and modular code generation using OpenAI integrations. Developed the frontend with persistent session logic and real-time feedback features to streamline developer workflows.",
     },
     {
         title: "Web Developer",
         company: "Simulint Innovations",
         date: "June 2021 - Present",
         description:
-            "Delivering custom web solutions for small businesses using React, Next.js, JavaScript, TypeScript and modern CMS platforms like Wix, Shopify, WordPress, Webflow and Squarespace. Projects focus on UI component design, performance optimization, and third-party integrations to drive user engagement and client conversions.",
+        "Delivering custom web solutions for small businesses using React, Next.js, JavaScript, TypeScript and modern CMS platforms like Wix, Shopify, WordPress, Webflow and Squarespace. Projects focus on UI component design, performance optimization, and third-party integrations to drive user engagement and client conversions.",
+    },
+    {
+        title: "Lead Full-Stack Software Engineer",
+        company: "DevConnect",
+        date: "March 2025 - July 2025",
+        description:
+            "Built a MERN-based developer platform with modular, scalable architecture and role-based access control. Led front and back-end development, API design, and accessibility improvements while coordinating open-source contributors through GitHub and Discord.",
     },
     {
         title: "Lead Back-End Software Engineer",

@@ -236,6 +236,33 @@ const projects = [
     demo: "",
     type: "Professional Work",
   },
+  {
+    id: "skipapi",
+    title: "SkipAPI",
+    summary: "AI-Powered SaaS Platform for API Automation.",
+    description: "SkipAPI is an AI-powered SaaS platform that transforms natural language prompts into production-ready backend APIs. Designed for developers and startups, it streamlines backend generation, authentication setup, and data modeling, all while reducing development time by up to 80% and cutting company costs.",
+    image: "/images/projects/project_logos/ai_laptop.jpg",
+    page_images: ["/images/projects/project_pages/skipapi_landing.png", "/images/projects/project_pages/skipapi_app.png"],
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "React",
+      "Node.js",
+      "Express",
+      "JavaScript",
+      "OpenAI",
+      "Redis",
+      "MongoDB",
+      "JWT",
+      "TailwindCSS",
+    ],
+    link: "/projects/skipapi",
+    github: "",
+    figma: [],
+    live: "https://skipapi.com/",
+    demo: "",
+    type: "Professional Work",
+  },
 ];
 
 export default projects;
