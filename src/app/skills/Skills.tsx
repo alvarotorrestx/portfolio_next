@@ -3,8 +3,8 @@
 import { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { IconType } from "react-icons";
-import { SiJavascript, SiTypescript, SiDatabricks, SiHtml5, SiCss3, SiNextdotjs, SiVuedotjs, SiExpress, SiGithubactions, SiReact, SiTailwindcss, SiNodedotjs, SiCplusplus, SiMongoose, SiPhp, SiFirebase, SiMongodb, SiDocker, SiPostman } from "react-icons/si";
-import { FaJava } from "react-icons/fa6";
+import { SiJavascript, SiTypescript, SiDatabricks, SiHtml5, SiCss3, SiNextdotjs, SiVuedotjs, SiExpress, SiGithubactions, SiReact, SiTailwindcss, SiNodedotjs, SiCplusplus, SiMongoose, SiPhp, SiFirebase, SiMongodb, SiDocker, SiPostman, SiJest, SiJira, SiRedis, SiOpenai } from "react-icons/si";
+import { FaJava, FaPython } from "react-icons/fa6";
 import { TbSql, TbBrandMysql } from "react-icons/tb";
 import { FaGitAlt } from "react-icons/fa";
 import { GrGoogle } from "react-icons/gr";
@@ -41,6 +41,7 @@ const skills = {
         { name: "JavaScript", icon: SiJavascript },
         { name: "TypeScript", icon: SiTypescript },
         { name: "Java", icon: FaJava },
+        { name: "Python", icon: FaPython },
         { name: "C++", icon: SiCplusplus },
         { name: "PHP", icon: SiPhp },
         { name: "SQL", icon: TbSql },
@@ -68,9 +69,14 @@ const skills = {
         { name: "Git", icon: FaGitAlt },
         { name: "Postman", icon: SiPostman },
         { name: "Docker", icon: SiDocker },
+        { name: "Jest", icon: SiJest },
+        { name: "Jira", icon: SiJira },
+        { name: "Redis", icon: SiRedis },
         { name: "CI/CD", icon: SiGithubactions },
+        { name: "Github Actions", icon: SiGithubactions },
     ],
     "AI & ML": [
+        { name: "OpenAI", icon: SiOpenai },
         { name: "Google ML Kit", icon: GrGoogle },
         { name: "Weaviate", icon: SiDatabricks },
     ],
