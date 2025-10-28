@@ -33,12 +33,12 @@ export default function Home() {
           <h2
             className="select-none text-2xl md:text-4xl lg:text-6xl uppercase font-bold text-center text-primary drop-shadow-[0_0_12px_rgba(255,0,0,1.0)]"
           >
-            Full-Stack Software Engineer
+            AI Software Engineer
           </h2>
           <p
             className="select-none text-sm md:text-md lg:text-lg font-bold text-center text-neutral-300 drop-shadow-[0_0_8px_rgba(255,255,255,1.0)] max-w-xl lg:max-w-5xl"
           >
-            I&#39;m a Software Engineer with 4+ years of startup experience, specializing in full-stack development and building scalable, user-focused technology using JavaScript, Java, Python, C++, PHP, and more.
+            I&#39;m an AI Software Engineer with 5+ years of startup and fintech experience, building full-stack, data-driven software that automate analysis and decision-making with Python, React, and machine learning tools like TensorFlow and Keras.
           </p>
 
           {/* Important Link */}
