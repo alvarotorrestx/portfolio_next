@@ -16,18 +16,32 @@ type Experience = {
 
 const experiences: Experience[] = [
     {
-        title: "Founder & Full-Stack Software Engineer",
-        company: "SkipAPI",
-        date: "July 2025 - Present",
+        title: "Contact Center Operations Specialist",
+        company: "Finance of America",
+        date: "January 2024 - Present",
         description:
-        "Designed and built an AI-powered SaaS platform that generates scalable backend APIs from natural language prompts. Engineered authentication, rate limiting with Redis, and modular code generation using OpenAI integrations. Developed the frontend with persistent session logic and real-time feedback features to streamline developer workflows.",
+            "Lead reporting and analytics initiatives for contact center operations, creating automated dashboards and daily performance reports with Python, SQL, and Power BI. Partner with data engineers and developers to optimize reporting pipelines and integrate AI-driven insights for anomaly detection and predictive analysis. Reduced manual reporting effort by 40% and improved executive visibility by 35%.",
+    },
+    {
+        title: "AI Software Engineer",
+        company: "PulseDesk",
+        date: "September 2025 - Present",
+        description:
+            "Developing an AI-powered analytics platform that detects anomalies in call center datasets using Python, FastAPI, and React. Implemented automated data pipelines and scikit-learn’s Isolation Forest algorithm to improve operational visibility and reporting accuracy by 45%. Integrated PostgreSQL and custom APIs for centralized insights and decision automation.",
     },
     {
         title: "Web Developer",
         company: "Simulint Innovations",
         date: "June 2021 - Present",
         description:
-        "Delivering custom web solutions for small businesses using React, Next.js, JavaScript, TypeScript and modern CMS platforms like Wix, Shopify, WordPress, Webflow and Squarespace. Projects focus on UI component design, performance optimization, and third-party integrations to drive user engagement and client conversions.",
+            "Delivering custom web solutions for small businesses using React, Next.js, JavaScript, TypeScript and modern CMS platforms like Wix, Shopify, WordPress, Webflow and Squarespace. Projects focus on UI component design, performance optimization, and third-party integrations to drive user engagement and client conversions.",
+    },
+    {
+        title: "Full-Stack Software Engineer",
+        company: "SkipAPI",
+        date: "July 2025 - August 2025",
+        description:
+            "Designed and built an AI-powered SaaS platform that generates scalable backend APIs from natural language prompts. Engineered authentication, rate limiting with Redis, and modular code generation using OpenAI integrations. Developed the frontend with persistent session logic and real-time feedback features to streamline developer workflows.",
     },
     {
         title: "Lead Full-Stack Software Engineer",
