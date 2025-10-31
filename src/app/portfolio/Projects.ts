@@ -263,6 +263,31 @@ const projects = [
     demo: "",
     type: "Professional Work",
   },
+  {
+    id: "pulsedesk",
+    title: "PulseDesk",
+    summary: "AI-powered data analytics platform that detects anomalies in call center performance datasets.",
+    description: "PulseDesk is an AI-powered analytics platform that automates anomaly detection and performance analysis for contact centers. The app was built with Python, FastAPI, and scikit-learn's Isolation Forest algorithm. Streamlining data processing and surfaces actionable insights through an interactive React dashboard powered by Plotly.js. PulseDesk was Designed to enhance operational visibility and accuracy with the success goal of improving reporting efficiency by over 45%.",
+    image: "/images/projects/project_logos/pulsedesk.jpg",
+    page_images: ["/images/projects/project_pages/skipapi_landing.png", "/images/projects/project_pages/skipapi_app.png"],
+    techStack: [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "scikit-learn",
+      "Isolation Forest",
+      "React",
+      "Plotly.js",
+      "TailwindCSS",
+      "DaisyUI"
+    ],
+    link: "/projects/pulsedesk",
+    github: "",
+    figma: [],
+    live: "",
+    demo: "",
+    type: "Professional Work",
+  },
 ];
 
 export default projects;
