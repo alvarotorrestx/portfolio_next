@@ -5,23 +5,41 @@ import Footer from '@/components/Footer'
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Alvaro Torres | Full-Stack Software Engineer",
+  title: "Alvaro Torres | AI Software Engineer",
   authors: [{ name: "Alvaro Torres - @alvartorrestx", url: "https://alvarotorres.dev" }],
-  description: "Software Engineer with startup experience in full-stack development and leading scalable, user-centric technology. Proficient in JavaScript, TypeScript, Java, Python, C++, PHP, and more; seeking full-time/internship roles.",
-  keywords: ["Full-Stack Developer", "Alvaro Torres", "React", "JavaScript", "C++", "Java", "Python", "PHP", "Software Engineer", "Software Developer", "Web Developer", "Back-end Developer", "Front-end Developer"],
+  description: "AI Software Engineer with startup and fintech corporate experience in full-stack development creating user-centric technology and tools that automate data analysis and decision-making. Proficient in Python, JavaScript, React, and machine learning tools such as Keras and TensorFlow; seeking full-time roles.",
+  keywords: [
+    "AI Software Engineer",
+    "Machine Learning Developer",
+    "Data Analyst",
+    "Python Developer",
+    "FastAPI",
+    "TensorFlow",
+    "Keras",
+    "scikit-learn",
+    "React Developer",
+    "Full-Stack Developer",
+    "Node.js",
+    "Next.js",
+    "Power BI",
+    "Automation Engineer",
+    "Alvaro Torres",
+    "alvarotorres.dev",
+    "@alvarotorrestx"
+  ],
   metadataBase: new URL("https://alvarotorres.dev"),
   viewport: "width=device-width, initial-scale=1",
   openGraph: {
-    title: "Alvaro Torres | Full-Stack Software Engineer",
-    description: "Software Engineer with startup experience in full-stack development and leading scalable, user-centric technology. Proficient in JavaScript, TypeScript, Java, Python, C++, PHP, and more; seeking full-time/internship roles.",
+    title: "Alvaro Torres | AI Software Engineer",
+    description: "AI Software Engineer with startup and fintech corporate experience in full-stack development creating user-centric technology and tools that automate data analysis and decision-making. Proficient in Python, JavaScript, React, and machine learning tools such as Keras and TensorFlow; seeking full-time roles.",
     images: ["/images/brand/logo_seo.jpg"],
     url: "/",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Alvaro Torres | Full-Stack Software Engineer",
-    description: "Software Engineer with startup experience in full-stack development and leading scalable, user-centric technology. Proficient in JavaScript, TypeScript, Java, Python, C++, PHP, and more; seeking full-time/internship roles.",
+    title: "Alvaro Torres | AI Software Engineer",
+    description: "AI Software Engineer with startup and fintech corporate experience in full-stack development creating user-centric technology and tools that automate data analysis and decision-making. Proficient in Python, JavaScript, React, and machine learning tools such as Keras and TensorFlow; seeking full-time roles.",
     images: ["/images/brand/logo_seo.jpg"],
   },
 };
@@ -61,7 +79,7 @@ export default function RootLayout({
             `,
           }}
         />
-        
+
         <CustomCursor />
         <main className="px-2 md:px-10 lg:px-20 xl:px-40 flex items-center justify-center flex-col">
           {children}
