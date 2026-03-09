@@ -259,7 +259,7 @@ const projects = [
     link: "/projects/skipapi",
     github: "",
     figma: [],
-    live: "https://skipapi.com/",
+    live: "",
     demo: "",
     type: "Professional Work",
   },
