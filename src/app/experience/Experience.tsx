@@ -27,7 +27,7 @@ const experiences: Experience[] = [
         company: "PulseDesk",
         date: "September 2025 - Present",
         description:
-            "Developing an AI-powered analytics platform that detects anomalies in call center datasets using Python, FastAPI, and React. Implemented automated data pipelines and scikit-learn’s Isolation Forest algorithm to improve operational visibility and reporting accuracy by 45%. Integrated PostgreSQL and custom APIs for centralized insights and decision automation.",
+            "Designed and developed PulseDesk, an AI-powered call intelligence platform that analyzes call center conversations using audio and transcript processing. Built a full-stack system with React, TypeScript, Python FastAPI, and PostgreSQL to detect sentiment, identify compliance risks, and surface coaching insights from customer interactions. Implemented machine learning pipelines and real-time alerting workflows to highlight key conversation moments and enable supervisors to monitor agent performance through an interactive analytics dashboard.",
     },
     {
         title: "Web Developer",
