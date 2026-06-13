@@ -20,21 +20,21 @@ const experiences: Experience[] = [
         company: "Finance of America",
         date: "January 2024 - Present",
         description:
-            "Lead reporting and analytics initiatives for contact center operations, creating automated dashboards and daily performance reports with Python, SQL, and Power BI. Partner with data engineers and developers to optimize reporting pipelines and integrate AI-driven insights for anomaly detection and predictive analysis. Reduced manual reporting effort by 40% and improved executive visibility by 35%.",
+            "Promoted from Customer Service Representative into a technical operations role supporting fintech contact center performance, Workforce Management in Genesys Cloud, cross-functional issue resolution, and reporting automation. Partner with customer service, sales, telecom, Salesforce, and executive stakeholders to identify service gaps, improve staffing visibility, and streamline workflows using Excel, VBA, Python, and operational data.",
     },
     {
         title: "Freelance Web Developer",
         company: "Simulint Innovations",
         date: "June 2021 - Present",
         description:
-            "Delivering custom web solutions for small businesses using React, Next.js, JavaScript, TypeScript and modern CMS platforms like Wix, Shopify, WordPress, Webflow and Squarespace. Projects focus on UI component design, performance optimization, and third-party integrations to drive user engagement and client conversions.",
+            "Design, develop, and maintain custom websites and business solutions for small businesses across Shopify, Wix, Squarespace, Webflow, and WordPress. Build JavaScript functionality, API integrations, lead capture workflows, and performance optimizations that improve customer engagement, site speed, and client conversion outcomes.",
     },
     {
         title: "Director of Marketing & IT",
         company: "Hacienda Mobile Home Sales",
         date: "July 2021 - January 2024",
         description:
-            "Led digital transformation by migrating the company website from a legacy PHP/MySQL stack to Wix and automating inventory workflows with VBA and JSON. Directed a hybrid team to deliver agile updates, enhance UX, and cut latency by over 60% through front-end rebuilds and CI/CD pipelines.",
+            "Managed marketing and IT workflows for a mobile home sales organization, partnering with leadership and property managers to improve website operations, customer engagement, and business processes. Migrated a legacy PHP/MySQL website to Wix using JavaScript and Velo, and built Excel VBA automation to convert inventory data into JSON for live website updates.",
     },
 ];
 
