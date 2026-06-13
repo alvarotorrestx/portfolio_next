@@ -159,7 +159,7 @@ const projects = [
     description:
       "DevConnect is an open-source MERN platform built to help developers connect, collaborate, and share opportunities. It features role-based access control, JWT authentication, contributor workflows, and scalable backend services while supporting collaboration across a community of 11+ contributors through GitHub and Discord.",
     image: "/images/projects/project_logos/devconnect.png",
-    page_images: ["/images/projects/project_pages/devconnect_light_dashboard.jpg", "/images/projects/project_pages/devconnect_dark_dashboard.jpg", "/images/projects/project_pages/devconnect_light_profile.jpg"],
+    page_images: ["/images/projects/project_pages/devconnect_light_dashboard.jpg", "/images/projects/project_pages/devconnect_light_profile.jpg"],
     techStack: [
       "React",
       "JavaScript",
@@ -264,7 +264,7 @@ const projects = [
     description:
       "ClassmateAI is a full-stack AI study platform built to help students transform course materials into personalized study content. Users can upload documents and generate AI-powered notes, flashcards, quizzes, and study guides while tracking progress through analytics, gamification, export, and public sharing features.",
     image: "/images/projects/project_logos/classmateai.png",
-    page_images: [],
+    page_images: ["/images/projects/project_pages/classmateai_upload.png", "/images/projects/project_pages/classmateai_processing.png", "/images/projects/project_pages/classmateai_dashboard.png", "/images/projects/project_pages/classmateai_flashcard.png", "/images/projects/project_pages/classmateai_quiz.png", "/images/projects/project_pages/classmateai_analytics.png"],
     techStack: [
       "React",
       "TailwindCSS",
@@ -279,6 +279,7 @@ const projects = [
     github: "https://github.com/alvarotorrestx/classmateai",
     figma: [],
     live: "https://classmateai-five.vercel.app/",
+    buttonText: "Live Demo",
     demo: "",
     type: "Featured Projects",
     featuredOrder: 1,
