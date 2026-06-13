@@ -6,17 +6,23 @@ import RevealText from "@/components/RevealText";
 import ProjectCard from "./ProjectCard";
 import projects from "./Projects";
 
-const SECTION_ORDER = ["Professional Work", "Academic Projects"] as const;
+const SECTION_ORDER = ["Featured Projects", "Client Work", "Academic Projects"] as const;
+
+type Project = (typeof projects)[number] & {
+  featuredOrder?: number;
+};
 
 export default function Portfolio() {
-  const grouped = projects.reduce<Record<string, typeof projects>>((acc, p) => {
-    (acc[p.type] ??= []).push(p);
+  const grouped = projects.reduce<Record<string, Project[]>>((acc, project) => {
+    (acc[project.type] ??= []).push(project as Project);
     return acc;
   }, {});
 
   return (
-    <section id="portfolio" className="max-w-[550px] md:max-w-[1600px] py-20 px-4 mx-auto
-                        w-full flex flex-col justify-center items-center overflow-hidden">
+    <section
+      id="portfolio"
+      className="max-w-[550px] md:max-w-[1600px] py-20 px-4 mx-auto w-full flex flex-col justify-center items-center overflow-hidden"
+    >
       <RevealText
         text="Portfolio"
         className="text-4xl md:text-5xl lg:text-6xl font-bold text-center"
@@ -25,7 +31,7 @@ export default function Portfolio() {
       />
 
       <div className="my-24 space-y-24">
-        {SECTION_ORDER.map(section => {
+        {SECTION_ORDER.map((section) => {
           const list = grouped[section] ?? [];
           if (!list.length) return null;
 
@@ -37,13 +43,9 @@ export default function Portfolio() {
 
               {list
                 .slice()
-                .reverse()
-                .map((proj, idx) => (
-                  <ProjectRow
-                    key={proj.id}
-                    project={proj}
-                    index={idx}
-                  />
+                .sort((a, b) => (a.featuredOrder ?? 999) - (b.featuredOrder ?? 999))
+                .map((project, index) => (
+                  <ProjectRow key={project.id} project={project} index={index} />
                 ))}
             </div>
           );
@@ -53,12 +55,11 @@ export default function Portfolio() {
   );
 }
 
-
 function ProjectRow({
   project,
   index,
 }: {
-  project: (typeof projects)[number];
+  project: Project;
   index: number;
 }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -70,13 +71,26 @@ function ProjectRow({
 
   const isEven = index % 2 === 0;
 
-  const xImg = useTransform(scrollYProgress, [0, 1],
-    isEven ? ["-20%", "0%"] : ["20%", "0%"]);
+  const xImg = useTransform(
+    scrollYProgress,
+    [0, 1],
+    isEven ? ["-20%", "0%"] : ["20%", "0%"]
+  );
+
   const opacityImg = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
-  const rotateZ = useTransform(scrollYProgress, [0, 1],
-    isEven ? [-22, 0] : [22, 0]);
-  const rotateY = useTransform(scrollYProgress, [0, 1],
-    isEven ? [-5, 0] : [5, 0]);
+
+  const rotateZ = useTransform(
+    scrollYProgress,
+    [0, 1],
+    isEven ? [-22, 0] : [22, 0]
+  );
+
+  const rotateY = useTransform(
+    scrollYProgress,
+    [0, 1],
+    isEven ? [-5, 0] : [5, 0]
+  );
+
   const yText = useTransform(scrollYProgress, [0, 1], [200, 0]);
 
   return (
