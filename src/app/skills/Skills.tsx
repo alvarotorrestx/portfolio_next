@@ -7,13 +7,13 @@ import {
     SiJavascript, SiTypescript, SiHtml5, SiCss3, SiNextdotjs,
     SiExpress, SiGithubactions, SiReact, SiTailwindcss, SiNodedotjs,
     SiCplusplus, SiPhp, SiFirebase, SiMongodb, SiDocker,
-    SiPostman, SiJira, SiRedis, SiOpenai, SiGithub, SiSwagger,
+    SiPostman, SiJira, SiRedis, SiOpenai, SiGithub,
     SiTensorflow, SiKeras, SiPandas, SiScikitlearn, SiFastapi, SiVite,
     SiSoundcharts, SiDatabricks, SiPostgresql, SiSupabase, SiVercel,
     SiRailway, SiGooglecloud
 } from "react-icons/si";
 import { FaJava, FaPython } from "react-icons/fa6";
-import { TbSql, TbBrandMysql, TbApi } from "react-icons/tb";
+import { TbBrandMysql, TbApi } from "react-icons/tb";
 import { FaGitAlt, FaKey } from "react-icons/fa";
 import RevealText from "@/components/RevealText";
 
