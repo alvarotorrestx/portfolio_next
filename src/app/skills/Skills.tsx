@@ -4,17 +4,17 @@ import { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { IconType } from "react-icons";
 import {
-    SiJavascript, SiTypescript, SiHtml5, SiCss3, SiNextdotjs, SiVuedotjs,
+    SiJavascript, SiTypescript, SiHtml5, SiCss3, SiNextdotjs,
     SiExpress, SiGithubactions, SiReact, SiTailwindcss, SiNodedotjs,
-    SiCplusplus, SiMongoose, SiPhp, SiFirebase, SiMongodb, SiDocker,
-    SiPostman, SiJest, SiJira, SiRedis, SiOpenai, SiGithub, SiSwagger,
+    SiCplusplus, SiPhp, SiFirebase, SiMongodb, SiDocker,
+    SiPostman, SiJira, SiRedis, SiOpenai, SiGithub, SiSwagger,
     SiTensorflow, SiKeras, SiPandas, SiScikitlearn, SiFastapi, SiVite,
-    SiSoundcharts, SiDatabricks, SiPostgresql
+    SiSoundcharts, SiDatabricks, SiPostgresql, SiSupabase, SiVercel,
+    SiRailway, SiGooglecloud
 } from "react-icons/si";
 import { FaJava, FaPython } from "react-icons/fa6";
-import { TbSql, TbBrandMysql } from "react-icons/tb";
-import { FaGitAlt } from "react-icons/fa";
-import { GrGoogle } from "react-icons/gr";
+import { TbSql, TbBrandMysql, TbApi } from "react-icons/tb";
+import { FaGitAlt, FaKey } from "react-icons/fa";
 import RevealText from "@/components/RevealText";
 
 function SkillPill({ name, Icon }: { name: string; Icon: IconType }) {
@@ -44,7 +44,7 @@ function SkillPill({ name, Icon }: { name: string; Icon: IconType }) {
 }
 
 const skills: Record<string, { name: string; icon: IconType }[]> = {
-    "Programming": [
+    "Languages": [
         { name: "Python", icon: FaPython },
         { name: "JavaScript", icon: SiJavascript },
         { name: "TypeScript", icon: SiTypescript },
@@ -55,45 +55,51 @@ const skills: Record<string, { name: string; icon: IconType }[]> = {
         { name: "CSS", icon: SiCss3 },
     ],
 
-    "AI & Data Science": [
+    "Frontend": [
+        { name: "React", icon: SiReact },
+        { name: "Next.js", icon: SiNextdotjs },
+        { name: "Tailwind CSS", icon: SiTailwindcss },
+        { name: "Vite", icon: SiVite },
+    ],
+
+    "Backend": [
+        { name: "FastAPI", icon: SiFastapi },
+        { name: "Node.js", icon: SiNodedotjs },
+        { name: "Express.js", icon: SiExpress },
+        { name: "REST APIs", icon: TbApi },
+        { name: "JWT Auth", icon: FaKey },
+        { name: "Redis", icon: SiRedis },
+    ],
+
+    "Databases": [
+        { name: "PostgreSQL", icon: SiPostgresql },
+        { name: "MongoDB", icon: SiMongodb },
+        { name: "MySQL", icon: TbBrandMysql },
+        { name: "Firebase", icon: SiFirebase },
+        { name: "Firestore", icon: SiFirebase },
+        { name: "Supabase", icon: SiSupabase },
+    ],
+
+    "Data & AI": [
+        { name: "Pandas", icon: SiPandas },
         { name: "TensorFlow", icon: SiTensorflow },
         { name: "Keras", icon: SiKeras },
-        { name: "Pandas", icon: SiPandas },
         { name: "scikit-learn", icon: SiScikitlearn },
+        { name: "OpenAI API", icon: SiOpenai },
         { name: "Weaviate", icon: SiDatabricks },
-        { name: "Google ML Kit", icon: GrGoogle },
+        { name: "Google ML Kit", icon: SiGooglecloud },
         { name: "Power BI", icon: SiSoundcharts },
     ],
 
-    "Frameworks": [
-        { name: "FastAPI", icon: SiFastapi },
-        { name: "React", icon: SiReact },
-        { name: "Next.js", icon: SiNextdotjs },
-        { name: "Vite", icon: SiVite },
-        { name: "Vue.js", icon: SiVuedotjs },
-        { name: "Tailwind CSS", icon: SiTailwindcss },
-        { name: "Express.js", icon: SiExpress },
-        { name: "Node.js", icon: SiNodedotjs },
-    ],
-
-    "Tools & Services": [
-        { name: "OpenAI", icon: SiOpenai },
+    "Cloud & DevOps": [
+        { name: "Docker", icon: SiDocker },
+        { name: "Vercel", icon: SiVercel },
+        { name: "Railway", icon: SiRailway },
         { name: "Git", icon: FaGitAlt },
         { name: "GitHub", icon: SiGithub },
-        { name: "RESTful APIs", icon: SiSwagger },
         { name: "CI/CD", icon: SiGithubactions },
-        { name: "Jest", icon: SiJest },
-        { name: "Jira", icon: SiJira },
-        { name: "Redis", icon: SiRedis },
         { name: "Postman", icon: SiPostman },
-        { name: "Firebase", icon: SiFirebase },
-        { name: "Firestore", icon: SiFirebase },
-        { name: "MongoDB", icon: SiMongodb },
-        { name: "Mongoose", icon: SiMongoose },
-        { name: "PostgreSQL", icon: SiPostgresql },
-        { name: "Docker", icon: SiDocker },
-        { name: "SQL", icon: TbSql },
-        { name: "MySQL", icon: TbBrandMysql },
+        { name: "Jira", icon: SiJira },
     ],
 };
 

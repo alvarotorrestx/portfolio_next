@@ -20,49 +20,21 @@ const experiences: Experience[] = [
         company: "Finance of America",
         date: "January 2024 - Present",
         description:
-            "Lead reporting and analytics initiatives for contact center operations, creating automated dashboards and daily performance reports with Python, SQL, and Power BI. Partner with data engineers and developers to optimize reporting pipelines and integrate AI-driven insights for anomaly detection and predictive analysis. Reduced manual reporting effort by 40% and improved executive visibility by 35%.",
+            "Promoted from Customer Service Representative into a technical operations role supporting fintech contact center performance, Workforce Management in Genesys Cloud, cross-functional issue resolution, and reporting automation. Partner with customer service, sales, telecom, Salesforce, and executive stakeholders to identify service gaps, improve staffing visibility, and streamline workflows using Excel, VBA, Python, and operational data.",
     },
     {
-        title: "AI Software Engineer",
-        company: "PulseDesk",
-        date: "September 2025 - Present",
-        description:
-            "Designed and developed PulseDesk, an AI-powered call intelligence platform that analyzes call center conversations using audio and transcript processing. Built a full-stack system with React, TypeScript, Python FastAPI, and PostgreSQL to detect sentiment, identify compliance risks, and surface coaching insights from customer interactions. Implemented machine learning pipelines and real-time alerting workflows to highlight key conversation moments and enable supervisors to monitor agent performance through an interactive analytics dashboard.",
-    },
-    {
-        title: "Web Developer",
+        title: "Freelance Web Developer",
         company: "Simulint Innovations",
         date: "June 2021 - Present",
         description:
-            "Delivering custom web solutions for small businesses using React, Next.js, JavaScript, TypeScript and modern CMS platforms like Wix, Shopify, WordPress, Webflow and Squarespace. Projects focus on UI component design, performance optimization, and third-party integrations to drive user engagement and client conversions.",
-    },
-    {
-        title: "Full-Stack Software Engineer",
-        company: "SkipAPI",
-        date: "July 2025 - August 2025",
-        description:
-            "Designed and built an AI-powered SaaS platform that generates scalable backend APIs from natural language prompts. Engineered authentication, rate limiting with Redis, and modular code generation using OpenAI integrations. Developed the frontend with persistent session logic and real-time feedback features to streamline developer workflows.",
-    },
-    {
-        title: "Lead Full-Stack Software Engineer",
-        company: "DevConnect",
-        date: "March 2025 - July 2025",
-        description:
-            "Built a MERN-based developer platform with modular, scalable architecture and role-based access control. Led front and back-end development, API design, and accessibility improvements while coordinating open-source contributors through GitHub and Discord.",
-    },
-    {
-        title: "Lead Back-End Software Engineer",
-        company: "Heroic Organizer",
-        date: "April 2025 - June 2025",
-        description:
-            "Developed an Android app for comic book collectors using Java, Firebase, and RESTful APIs to enable real-time search and data entry. Integrated Google ML Kit for OCR, image labeling, and metadata retrieval through Weaviate to support intelligent cataloging.",
+            "Design, develop, and maintain custom websites and business solutions for small businesses across Shopify, Wix, Squarespace, Webflow, and WordPress. Build JavaScript functionality, API integrations, lead capture workflows, and performance optimizations that improve customer engagement, site speed, and client conversion outcomes.",
     },
     {
         title: "Director of Marketing & IT",
         company: "Hacienda Mobile Home Sales",
         date: "July 2021 - January 2024",
         description:
-            "Led digital transformation by migrating the company website from a legacy PHP/MySQL stack to Wix and automating inventory workflows with VBA and JSON. Directed a hybrid team to deliver agile updates, enhance UX, and cut latency by over 60% through front-end rebuilds and CI/CD pipelines.",
+            "Managed marketing and IT workflows for a mobile home sales organization, partnering with leadership and property managers to improve website operations, customer engagement, and business processes. Migrated a legacy PHP/MySQL website to Wix using JavaScript and Velo, and built Excel VBA automation to convert inventory data into JSON for live website updates.",
     },
 ];
 

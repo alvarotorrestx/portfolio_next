@@ -89,7 +89,12 @@ export default function ProjectPage() {
                     <IconLink extLink url={project.github} title="GitHub" icon={<FaGithub className="text-2xl" />} />
                   )}
                   {project.live && (
-                    <CTALink extLink url={project.live} text="Visit Website" icon={<FiExternalLink />} />
+                    <CTALink
+                      extLink
+                      url={project.live}
+                      text={project.buttonText ?? "Visit Website"}
+                      icon={<FiExternalLink />}
+                    />
                   )}
                 </div>
               </div>
