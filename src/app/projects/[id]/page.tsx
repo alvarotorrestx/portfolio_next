@@ -1,7 +1,6 @@
 "use client";
 
-import { useParams } from "next/navigation";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter, notFound } from "next/navigation";
 import projects from "@/app/portfolio/Projects";
 import { motion } from "framer-motion";
 import RevealText from "@/components/RevealText";
@@ -17,7 +16,7 @@ export default function ProjectPage() {
   const { id } = useParams();
   const project = projects.find((p) => p.id === id);
 
-  if (!project) return <div className="text-center text-white py-20">Project not found.</div>;
+  if (!project) notFound();
 
 
   return (
