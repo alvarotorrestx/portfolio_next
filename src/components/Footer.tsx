@@ -6,10 +6,12 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { GrDocumentPdf } from "react-icons/gr";
 import { MdOutlineEmail } from "react-icons/md";
 import CreditModal from './CreditModal';
+import PrivacyPolicyModal from './PrivacyPolicyModal';
 
 const Footer = () => {
 
     const [open, setOpen] = useState(false);
+    const [privacyOpen, setPrivacyOpen] = useState(false);
 
     return (
         <footer className="footer footer-horizontal footer-center bg-base-300 text-primary-content py-15 px-5">
@@ -38,10 +40,15 @@ const Footer = () => {
                     <img src="/images/icons/cursor.png" alt="Batman Beyond Logo" className="w-5" />
                 </p>
                 <p>Copyright© {new Date().getFullYear()}.  Alvaro Torres. All Right Reserved.</p>
-                <button onClick={() => setOpen(true)} className='font-bold p-4 text-primary hover:underline cursor-pointer'>Artwork Credits</button>
+                <p className="flex flex-row justify-center items-center gap-2">
+                    <button onClick={() => setOpen(true)} className='font-bold p-4 text-primary hover:underline cursor-pointer'>Artwork Credits</button>
+                    <span className="text-base-content">•</span>
+                    <button onClick={() => setPrivacyOpen(true)} className='font-bold p-4 text-primary hover:underline cursor-pointer'>Privacy Policy</button>
+                </p>
             </aside>
 
             <CreditModal open={open} setOpen={setOpen} />
+            <PrivacyPolicyModal open={privacyOpen} setOpen={setPrivacyOpen} />
 
         </footer>
     )
