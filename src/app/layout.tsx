@@ -3,6 +3,7 @@ import "./globals.css";
 import CustomCursor from "@/components/CustomCursor";
 import Footer from '@/components/Footer'
 import Script from "next/script";
+import ClarityProvider from "@/components/ClarityProvider";
 
 export const metadata: Metadata = {
   title: "Alvaro Torres | Full-Stack Software Engineer",
@@ -105,6 +106,8 @@ export default function RootLayout({
             `,
           }}
         />
+
+        <ClarityProvider />
 
         <CustomCursor />
         <main className="px-2 md:px-10 lg:px-20 xl:px-40 flex items-center justify-center flex-col">
